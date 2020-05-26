@@ -3,9 +3,9 @@ body{
 }
 
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
 }
 
 header{
@@ -26,7 +26,7 @@ nav{
 
 nav a{
     color: #858484;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     font-weight: bold;
     margin: 5px;
