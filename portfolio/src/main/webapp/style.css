@@ -1,64 +1,107 @@
-body{
+body {
     background-color: #f3f3ec;
 }
 
 #content {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
 }
 
-header{
+h1,
+p,
+a {
+    color: #858484;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
     width: 100%;
     height: 50px;
 }
 
-.mainHeader{
-    color: #858484;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.main-header {
     font-size: 36px;
     text-align: center;
 }
-nav{
+
+nav {
     text-align: center;
     margin-bottom: 15px;
 }
 
-nav a{
-    color: #858484;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+nav a {
     font-size: 18px;
     font-weight: bold;
     margin: 5px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.mainLinks{
+.main-links {
     text-align: center;
     margin-bottom: 100px;
 }
 
-img{
+.main-links div {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
     margin: 8px 0px;
 }
 
-.firstRow{
-    display: flex;
-    justify-content: space-between;
-}
-
-.secondRow{
-    display: flex;
-    justify-content: space-between;
-}
-
-#leftRectangle{
+#gallery-main-link {
     margin-top: -42px;
 }
 
-#rightRectangle{
+#blog-main-link {
     margin-top: -42px;
+}
+
+.about-me {
+    height: 400px;
+    background-color: pink;
+}
+
+#about-me-img {
+    float: left;
+    margin: 65px 10px;
+}
+
+.gallery {
+    height: 550px;
+}
+
+#gallery-about {
+    position: absolute;
+    margin-top: 80px;
+}
+
+#about-my-photography {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    color: #f7f8e9;
+    padding-top: 200px;
+    margin: 0px 615px 0 185px;
+}
+
+.gallery-imgs img {
+    position: absolute;
+}
+
+#puzzle-img {
+    margin: -250px 0 0 385px;
+}
+
+#mirror-img {
+    margin: -190px 0 0 580px;
+    z-index: +1;
+}
+
+#bench-img {
+    margin: -230px 0 0 780px;
 }
