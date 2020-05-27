@@ -10,6 +10,7 @@ body {
 
 h1,
 h2,
+h3,
 p,
 a {
     color: #858484;
@@ -136,4 +137,26 @@ img {
 
 #bench-img {
     margin: -230px 0 0 780px;
+}
+
+.blog {
+    height: 350px;
+}
+
+.blog a {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 40px;
+}
+
+.blog-entry {
+    margin-left: 60px;
+}
+
+.blog-entry h3 {
+    margin-top: -10px;
+}
+
+.blog-entry p {
+    font-size: 18px;
 }
