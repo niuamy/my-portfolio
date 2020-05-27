@@ -9,44 +9,44 @@
   <body>
     <div id="content">
       <header>
-          <h1 class="main-header">Amy's Portfolio</h1>
+        <h1 class="main-header">Amy's Portfolio</h1>
       </header>
       <nav>
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT</a>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
       </nav>
       <main>
-          <div class="main-links">
-              <div class="first-row">
-                <a href="#about-me">
-                    <img src="images/leftTriangle.PNG" alt="About Me" width="230" height="270">
-                </a>
-                <a href="#projects">
-                    <img src="images/centerRectangle.PNG" alt="Projects" width="240" height="320">
-                </a>
-                <a href="#contact-me">
-                    <img src="images/rightTriangle.PNG" alt="Contact Me" width="230" height="270">
-                </a>
-              </div>
-              <div class= "second-row">
-                <a href="#gallery">
-                    <img src="images/leftRectangle.PNG" id="gallery-main-link" alt="Gallery" width="230" height="290">
-                </a>
-                <a href="#gallery">
-                    <img src="images/circle.PNG" alt="About My Photography" width="240" height="240">
-                </a>
-                <a href="#blog">
-                    <img src="images/rightRectangle.PNG" id="blog-main-link" alt="Blog" width="230" height="290">
-                </a>
-              </div>
+        <div class="main-links">
+          <div class="first-row">
+            <a href="#about-me">
+              <img src="images/leftTriangle.PNG" alt="About Me" width="230" height="270">
+            </a>
+            <a href="#projects">
+              <img src="images/centerRectangle.PNG" alt="Projects" width="240" height="320">
+            </a>
+            <a href="#contact-me">
+              <img src="images/rightTriangle.PNG" alt="Contact Me" width="230" height="270">
+            </a>
           </div>
-          <div class="about-me" id="about-me">
-              <a href="#">
-                    <img src="images/leftTriangle.PNG" id="about-me-img" alt="About Me" width="230" height="270">
-              </a>
-              <h1 id="about-me-header">Hi, I'm Amy</h1>
-              <p id="about-me-description">I'm a rising sophomore at Ohio State University studying Computer Science and Engineering. 
+          <div class= "second-row">
+            <a href="#gallery">
+              <img src="images/leftRectangle.PNG" id="gallery-main-link" alt="Gallery" width="230" height="290">
+            </a>
+            <a href="#gallery">
+              <img src="images/circle.PNG" alt="About My Photography" width="240" height="240">
+            </a>
+            <a href="#blog">
+              <img src="images/rightRectangle.PNG" id="blog-main-link" alt="Blog" width="230" height="290">
+            </a>
+          </div>
+        </div>
+        <div class="about-me" id="about-me">
+          <a href="#">
+            <img src="images/leftTriangle.PNG" id="about-me-img" alt="About Me" width="230" height="270">
+          </a>
+            <h1 id="about-me-header">Hi, I'm Amy</h1>
+            <p id="about-me-description">I'm a rising sophomore at Ohio State University studying Computer Science and Engineering. 
                  For starters, although I'm an introvert, I love meeting new people and making connections! 
                  In my free time, I enjoy singing, listening to music and podcasts, and watching tv shows. 
                  My current favorite music artists include Lauv, Khalid, Noah Cyrus, and I've been a long- 
@@ -55,54 +55,57 @@
                  any crime show, the Good Place, Money Heist, and most recently, I rewatched Avatar the 
                  Last Airbender. I also love bubble tea and worked at a bubble tea shop in high school, so 
                  if you need any recommendations, you know who to ask! :)
-              </p>
+            </p>
+        </div>
+        <div class="projects" id="projects">
+          <a href="#">
+            <img src="images/myProjects.PNG" id="my-projects-img" alt="My Projects" width="450" height="290">
+          </a>
+          <div class="project-description">
+            <h2>Tag Cloud Generator</h2>
+            <p>This was one of my favorite class projects. The objective was to use standard Java to read in a file 
+                and output a tag cloud using HTML/CSS, where the size of each word was dependent on the amount of times
+                it appeared in the file
+            </p>
+            <h2>GPA Calculator</h2>
+            <p>This calculator has a dual purpose. One is to allow the user to input their courses and current letter grades
+                to calculate their cumulative GPA. Another feature lets the user calculate their current grade for a given
+                course.
+            </p>
+            <h2>MySite</h2>
+            <p>This is one of my first attempts at a personal website from scratch. It mainly served as a practice project
+                for the purpose or learning Python and HTML/CSS in Flask.
+            </p>
           </div>
-          
-          <div class="projects" id="projects">
-              <a href="#">
-                    <img src="images/myProjects.PNG" id="my-projects-img" alt="My Projects" width="450" height="290">
-              </a>
-              <div class="project-description">
-                <h2>Tag Cloud Generator</h2>
-                <p>This was one of my favorite class projects. The objective was to use standard Java to read in a file 
-                    and output a tag cloud using HTML/CSS, where the size of each word was dependent on the amount of times
-                    it appeared in the file
-                </p>
-                <h2>GPA Calculator</h2>
-                <p>This calculator has a dual purpose. One is to allow the user to input their courses and current letter grades
-                    to calculate their cumulative GPA. Another feature lets the user calculate their current grade for a given
-                    course.
-                </p>
-                <h2>MySite</h2>
-                <p>This is one of my first attempts at a personal website from scratch. It mainly served as a practice project
-                    for the purpose or learning Python and HTML/CSS in Flask.
-                </p>
-              </div>
+        </div>
+        <div class="contact-me" id="contact-me">
+          <a href="#">
+            <img src="images/contactMe.PNG" id="contact-me-img" alt="Contact Me" width="300" height="230">
+          </a>
+          <a href="https://www.linkedin.com/in/amy-niu/">
+            <img src="images/linkedin.PNG" id="linkedin-img" alt="LinkedIn" width="230" height="230">
+          </a>
+          <a href="https://github.com/niuamy">
+            <img src="images/github.PNG" id="github-img" alt="GitHub" width="230" height="230">
+          </a>
+        </div>
+        <div class="gallery" id="gallery">
+          <a href="#">
+            <img src="images/galleryAbout.PNG" id="gallery-about-img" alt="Gallery and About My Photography" width="390" height="340">
+            <p id="about-my-photography">To preface, normally my favorite subjects to capture on camera are other human beings, 
+              specifically my friends and family. For privacy reasons however, I chose not to include actual photos of them.
+            </p>
+          </a>
+          <div class="gallery-imgs">
+            <img src="images/puzzle.jpeg" id="puzzle-img" alt="Puzzle" width="210" height="260">
+            <img src="images/mirror.jpeg" id="mirror-img" alt="Mirror" width="210" height="260">
+            <img src="images/bench.jpeg" id="bench-img" alt="Bench" width="210" height="260">
           </div>
-          <div class="contact-me" id="contact-me">
-              <h1>CONTACT ME</h1>
-              <a href="#">LinkedIn</a>
-              <a href="#">GitHub</a>
-          </div>
-          <div class="gallery" id="gallery">
-              <a href="#">
-                <img src="images/galleryAbout.PNG" id="gallery-about-img" alt="Gallery and About My Photography" width="390" height="340">
-                <p id="about-my-photography">
-                    To preface, normally my favorite subjects to capture on camera are other human beings, 
-                    specifically my friends and family. For privacy reasons however, I chose not to include 
-                    actual photos of them.
-                </p>
-              </a>
-              <div class="gallery-imgs">
-                <img src="images/puzzle.jpeg" id="puzzle-img" alt="Puzzle" width="210" height="260">
-                <img src="images/mirror.jpeg" id="mirror-img" alt="Mirror" width="210" height="260">
-                <img src="images/bench.jpeg" id="bench-img" alt="Bench" width="210" height="260">
-              </div>
-          </div>
-          <div class="blog" id="blog">
-              <h1>BLOG</h1>
-              <p>My hidden talent: untying knots</p>
-          </div>
+        </div>
+        <div class="blog" id="blog">
+          <h1>BLOG</h1>
+          <p>My hidden talent: untying knots</p>
+        </div>
       </main>
     </div>
   </body>
