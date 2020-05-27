@@ -64,12 +64,20 @@ img {
 
 .about-me {
     height: 400px;
-    background-color: pink;
 }
 
 #about-me-img {
     float: left;
-    margin: 65px 10px;
+    margin: 65px 20px;
+}
+
+#about-me-header {
+    padding-top: 70px;
+}
+
+#about-me-description {
+    font-size: 19px;
+    margin-top: -8px;
 }
 
 .gallery {
