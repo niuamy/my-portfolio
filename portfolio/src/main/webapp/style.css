@@ -9,6 +9,7 @@ body {
 }
 
 h1,
+h2,
 p,
 a {
     color: #858484;
@@ -80,11 +81,25 @@ img {
     margin-top: -8px;
 }
 
+.projects {
+    height: 500px;
+}
+
+.project-description {
+    padding-top: 60px;
+    margin-left: 470px;
+}
+
+#my-projects-img {
+    float: left;
+    margin: 105px 20px 0 0;
+}
+
 .gallery {
     height: 550px;
 }
 
-#gallery-about {
+#gallery-about-img {
     position: absolute;
     margin-top: 80px;
 }
