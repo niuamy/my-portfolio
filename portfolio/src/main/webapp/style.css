@@ -95,6 +95,15 @@ img {
     margin: 105px 20px 0 0;
 }
 
+.contact-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-me img {
+    margin: 20px 40px;
+}
+
 .gallery {
     height: 550px;
 }
