@@ -5,7 +5,7 @@ body{
 #content {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
 }
 
 header{
@@ -41,18 +41,13 @@ a{
     margin-bottom: 100px;
 }
 
+.mainLinks div{
+    display: flex;
+    justify-content: space-between;
+}
+
 img{
     margin: 8px 0px;
-}
-
-.firstRow{
-    display: flex;
-    justify-content: space-between;
-}
-
-.secondRow{
-    display: flex;
-    justify-content: space-between;
 }
 
 #leftRectangle{
@@ -61,4 +56,38 @@ img{
 
 #rightRectangle{
     margin-top: -42px;
+}
+
+.gallery{
+    height: 550px;
+}
+
+#gallery-about{
+    position: absolute;
+    margin-top: 80px;
+}
+
+#about-my-photography{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    color: #f7f8e9;
+    padding-top: 200px;
+    margin: 0px 615px 0 185px;
+}
+
+.gallery-imgs img{
+    position: absolute;
+}
+
+#puzzle-img{
+    margin: -250px 0 0 385px;
+}
+
+#mirror-img{
+    margin: -190px 0 0 580px;
+    z-index: +1;
+}
+
+#bench-img{
+    margin: -230px 0 0 780px;
 }
