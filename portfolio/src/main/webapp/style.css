@@ -50,6 +50,15 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color:#b8b8b8;
+}
+
+a:hover img {
+    box-shadow: 2px 2px 10px 8px #d6d6d6da;
+    transition: all .3s ease;
+}
+
 .main-links {
     text-align: center;
     margin-bottom: 100px;
