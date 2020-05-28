@@ -2,6 +2,10 @@ body {
     background-color: #f3f3ec;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #content {
     margin-left: auto;
     margin-right: auto;
