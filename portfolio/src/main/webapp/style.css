@@ -2,6 +2,10 @@ body {
     background-color: #f3f3ec;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #content {
     margin-left: auto;
     margin-right: auto;
@@ -15,6 +19,10 @@ p,
 a {
     color: #858484;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    font-size: 17px;
 }
 
 header {
@@ -49,7 +57,7 @@ a {
 
 .main-links div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 img {
@@ -65,48 +73,42 @@ img {
 }
 
 .about-me {
-    height: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#about-me-img {
-    float: left;
-    margin: 65px 20px;
+.about-me-left {
+    margin: 10px 40px;
 }
 
-#about-me-header {
-    padding-top: 70px;
-}
-
-#about-me-description {
-    font-size: 19px;
-    margin-top: -8px;
+.about-me-right {
+    margin: 55px 40px;
 }
 
 .projects {
-    height: 500px;
+    height: 550px;
 }
 
 .project-description {
-    padding-top: 60px;
+    padding-top: 40px;
     margin-left: 470px;
 }
 
 #my-projects-img {
     float: left;
-    margin: 105px 20px 0 0;
+    margin: 130px 20px 0 0;
 }
 
 .contact-me {
+    height: 250px;
+    padding-top: 30px;
     display: flex;
-    justify-content: space-between;
-}
-
-.contact-me img {
-    margin: 20px 40px;
+    justify-content: space-evenly;
 }
 
 .gallery {
-    height: 550px;
+    height: 525px;
 }
 
 #gallery-about-img {
@@ -116,10 +118,11 @@ img {
 
 #about-my-photography {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
     position: relative;
     color: #f7f8e9;
-    padding-top: 200px;
-    margin: 0px 615px 0 185px;
+    padding-top: 185px;
+    margin: 0px 680px 0 115px;
 }
 
 .gallery-imgs img {
@@ -127,16 +130,16 @@ img {
 }
 
 #puzzle-img {
-    margin: -250px 0 0 385px;
+    margin: -265px 0 0 360px;
 }
 
 #mirror-img {
-    margin: -190px 0 0 580px;
+    margin: -205px 0 0 565px;
     z-index: +1;
 }
 
 #bench-img {
-    margin: -230px 0 0 780px;
+    margin: -245px 0 0 765px;
 }
 
 .blog {
@@ -146,7 +149,7 @@ img {
 .blog a {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 .blog-entry {
