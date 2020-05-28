@@ -21,7 +21,8 @@ a {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-p {
+p,
+a {
     font-size: 17px;
 }
 
@@ -152,7 +153,7 @@ img {
 }
 
 .blog {
-    height: 350px;
+    height: 390px;
 }
 
 .blog a {
@@ -171,4 +172,17 @@ img {
 
 .blog-entry p {
     font-size: 18px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: left;
+}
+
+.link-container p {
+    margin-top: -2px;
+}
+
+#generate-link {
+    margin-left: 6px;
 }
