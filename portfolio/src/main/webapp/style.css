@@ -64,30 +64,28 @@ header,
 }
 
 #about-me-link {
-    border-bottom: 4px solid #bd5a5a;
+  border-bottom: 4px solid #bd5a5a;
 }
 
 #projects-link {
-    border-bottom: 4px solid #edc75f;
+  border-bottom: 4px solid #edc75f;
 }
 
 #contact-me-link {
-    border-bottom: 4px solid #87d3af;
+  border-bottom: 4px solid #87d3af;
 }
 
 #gallery-link {
-    border-bottom: 4px solid #eae2a2;
+  border-bottom: 4px solid #eae2a2;
 }
 
 #about-photography-link {
-    border-bottom: 4px solid #66b1a2;
+  border-bottom: 4px solid #66b1a2;
 }
 
 #blog-link {
-    border-bottom: 4px solid #a73715;
+  border-bottom: 4px solid #a73715;
 }
-
-
 
 @media only screen and (min-width: 768px) {
 
