@@ -2,10 +2,6 @@ body {
   background-color: #f3f3ec;
 }
 
-#content {
-    text-align: center;
-}
-
 h1,
 h2,
 h3,
@@ -15,71 +11,35 @@ a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h2 {
-    font-size: 6vw;
-}
-
-p {
-    font-size: 4.5vw;
-    margin: -10px 20px 20px 20px;
-}
-
 a {
   text-decoration: none;
 }
 
-header,
-.nav-desktop,
-.main-links,
-.about-me-center,
-#my-projects-img,
-.contact-me-desktop,
-.gallery a,
-.blog img {
-  display: none;
-}
+@media only screen and (max-width: 769px) {
 
-.nav-container {
-  text-align: center;
-}
+  #content {
+    text-align: center;
+  }
 
-.nav-mobile {
-  overflow: hidden;
-  position: relative;
-}
+  h2 {
+    font-size: 6vw;
+  }
 
-.nav-mobile #nav-links {
-  display: none;
-}
+  h3 {
+    font-size: 5vw;
+    margin-top: -10px;
+  }
 
-.mobile-header {
-  font-size: 8vw;
-  padding-bottom: 10px;
-  border-bottom: 3px solid;
-  margin: 0 30px;
-}
+  p {
+    font-size: 4vw;
+    margin: -10px 30px 20px 30px;
+  }
 
-#mobile-about-me-header {
-  border-color: #bd5a5a;
-}
-
-#mobile-projects-header {
-  border-color: #edc75f;
-}
-
-#mobile-contact-me-header {
-  border-color: #87d3af;
-}
-
-#mobile-gallery-header {
-  border-color: #eae2a2;
-}
-
-#mobile-blog-header {
-  border-color: #a73715;
-}
-
-@media only screen and (min-width: 768px) {
+  img {
+    border: 5px solid #eae2a2;
+    padding: 15px;
+    margin: 10px;
+  }
 
   header,
   .nav-desktop,
@@ -87,14 +47,91 @@ header,
   .about-me-center,
   #my-projects-img,
   .contact-me-desktop,
-  .gallery a,
+  .gallery a img,
+  .blog img {
+    display: none;
+  }
+
+  .nav-container {
+    text-align: center;
+  }
+
+  .nav-mobile {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .nav-mobile #nav-links {
+    display: none;
+  }
+
+  .mobile-header {
+    font-size: 8vw;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+    margin: 25px 30px;
+  }
+
+  #mobile-about-me-header {
+    border-color: #bd5a5a;
+  }
+
+  #mobile-projects-header {
+    border-color: #edc75f;
+  }
+
+  #mobile-contact-me-header {
+    border-color: #87d3af;
+  }
+
+  #mobile-gallery-header {
+    border-color: #eae2a2;
+  }
+
+  #mobile-blog-header {
+    border-color: #a73715;
+  }
+
+  .contact-me-mobile h2 {
+    border: 2px solid #87d3af;
+    margin: 15px 110px;
+    padding: 15px;
+    border-radius: 5%;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #generate-link {
+    margin-top: -10px;
+    margin-left: -25px;
+    font-size: 4.5vw;
+  }
+
+  .blog {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  header,
+  .nav-desktop,
+  .main-links,
+  .about-me-center,
+  #my-projects-img,
+  .contact-me-desktop,
+  .gallery a img,
   .blog img {
     display:block;
   }
 
   .nav-mobile,
   .mobile-header,
-  #mobile-about-photography {
+  #mobile-about-photography,
+  .contact-me-mobile {
     display: none;
   }
 
