@@ -15,7 +15,7 @@
 /**
  * Generates a random link on the page.
  */
-function generateLink(id) {
+function generateLink() {
     const links = 
       ['https://www.allrecipes.com/recipe/51301/sarahs-applesauce/','https://www.pexels.com/photo/brown-cattle-on-green-lawn-grass-during-daytime-162240/'];
 
@@ -25,4 +25,17 @@ function generateLink(id) {
     // Add it to the page.
     const linkContainer = document.getElementById('generate-link');
     linkContainer.href = link;
+}
+
+/** 
+ * Displays and hides navigation menu links
+ */
+function navbar() {
+  const navDisplay = document.getElementById('nav-links')
+  
+  if(navDisplay.style.display === "block") {
+    navDisplay.style.display = "none";
+  } else {
+    navDisplay.style.display = "block";       
+  }
 }

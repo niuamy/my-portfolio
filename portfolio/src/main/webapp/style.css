@@ -2,16 +2,6 @@ body {
   background-color: #f3f3ec;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1000px;
-}
-
 h1,
 h2,
 h3,
@@ -21,184 +11,245 @@ a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-p,
-a {
-  font-size: 17px;
-}
-
-header {
-  width: 100%;
-  height: 50px;
-}
-
-.main-header {
-  font-size: 36px;
-  text-align: center;
-}
-
-nav {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-nav a {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px;
-}
-
 a {
   text-decoration: none;
 }
 
-a:hover {
-  color:#b8b8b8;
+header,
+.nav-desktop,
+.main-links,
+.about-me-center,
+#my-projects-img,
+.contact-me,
+.gallery a,
+.blog img {
+  display: none;
 }
 
-a:hover img {
-  box-shadow: 2px 2px 10px 8px #d6d6d6da;
-  transition: all .3s ease;
-}
-
-.main-links {
+.nav-container {
   text-align: center;
-  margin-bottom: 100px;
 }
 
-.main-links div {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-img {
-  margin: 8px 0px;
-}
-
-#gallery-main-link {
-  margin-top: -42px;
-}
-
-#blog-main-link {
-  margin-top: -42px;
-}
-
-.arrow-transition {
-  border: solid #b8b8b8;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 8px;
-  transform: rotate(45deg);
-}
-
-.arrow-transition:hover {
-  border: solid #858484;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 8px;
-  transform: rotate(45deg);
-}
-
-.about-me {
-  height: 350px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.about-me-left {
-  margin: 10px 40px;
-}
-
-.about-me-right {
-  margin: 55px 40px;
-}
-
-.projects {
-  height: 550px;
-}
-
-.project-description {
-  padding-top: 40px;
-  margin-left: 470px;
-}
-
-#my-projects-img {
-  float: left;
-  margin: 130px 20px 0 0;
-}
-
-.contact-me {
-  height: 250px;
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.gallery {
-  height: 525px;
-}
-
-#gallery-about-img {
-  position: absolute;
-  margin-top: 80px;
-}
-
-#about-my-photography {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 16px;
+.nav-mobile {
+  overflow: hidden;
   position: relative;
-  color: #f7f8e9;
-  padding-top: 185px;
-  margin: 0px 680px 0 115px;
 }
 
-.gallery-imgs img {
-  position: absolute;
+.nav-mobile #nav-links {
+  display: none;
 }
 
-#puzzle-img {
-  margin: -265px 0 0 360px;
-}
+@media only screen and (min-width: 768px) {
 
-#mirror-img {
-  margin: -205px 0 0 565px;
-  z-index: +1;
-}
+  header,
+  .nav-desktop,
+  .main-links,
+  .about-me-center,
+  #my-projects-img,
+  .contact-me,
+  .gallery a,
+  .blog img {
+    display:block;
+  }
 
-#bench-img {
-  margin: -245px 0 0 765px;
-}
+  .nav-mobile {
+    display: none;
+  }
 
-.blog {
-  height: 390px;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-.blog a {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 20px;
-}
+  #content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+  }
 
-.blog-entry {
-  margin-left: 60px;
-}
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    color: #858484;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
-.blog-entry h3 {
-  margin-top: -10px;
-}
+  p,
+  a {
+    font-size: 17px;
+  }
 
-.blog-entry p {
-  font-size: 18px;
-}
+  header {
+    width: 100%;
+    height: 50px;
+  }
 
-.link-container {
-  display: flex;
-  justify-content: left;
-}
+  .main-header {
+    font-size: 36px;
+    text-align: center;
+  }
 
-.link-container p {
-  margin-top: -2px;
-}
+  .nav-desktop {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
-#generate-link {
-  margin-left: 6px;
+  .nav-desktop a {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+  }
+
+  a:hover {
+    color:#b8b8b8;
+  }
+
+  a:hover img {
+    box-shadow: 2px 2px 10px 8px #d6d6d6da;
+    transition: all .3s ease;
+  }
+
+  .main-links {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .main-links div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  img {
+    margin: 8px 0px;
+  }
+
+  #gallery-main-link {
+    margin-top: -42px;
+  }
+
+  #blog-main-link {
+    margin-top: -42px;
+  }
+
+  .arrow-transition {
+    border: solid #b8b8b8;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 8px;
+    transform: rotate(45deg);
+  }
+
+  .arrow-transition:hover {
+    border: solid #858484;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 8px;
+    transform: rotate(45deg);
+  }
+
+  .about-me {
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-me-left {
+    margin: 10px 40px;
+  }
+
+  .about-me-right {
+    margin: 55px 40px;
+  }
+
+  .projects {
+    height: 550px;
+  }
+
+  .project-description {
+    padding-top: 40px;
+    margin-left: 470px;
+  }
+
+  #my-projects-img {
+    float: left;
+    margin: 130px 20px 0 0;
+  }
+
+  .contact-me {
+    height: 250px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .gallery {
+    height: 525px;
+  }
+
+  #gallery-about-img {
+    position: absolute;
+    margin-top: 80px;
+  }
+
+  #about-my-photography {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    position: relative;
+    color: #f7f8e9;
+    padding-top: 185px;
+    margin: 0px 680px 0 115px;
+  }
+
+  .gallery-imgs img {
+    position: absolute;
+  }
+
+  #puzzle-img {
+    margin: -265px 0 0 360px;
+  }
+
+  #mirror-img {
+    margin: -205px 0 0 565px;
+    z-index: +1;
+  }
+
+  #bench-img {
+    margin: -245px 0 0 765px;
+  }
+
+  .blog {
+    height: 390px;
+  }
+
+  .blog a {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20px;
+  }
+
+  .blog-entry {
+    margin-left: 60px;
+  }
+
+  .blog-entry h3 {
+    margin-top: -10px;
+  }
+
+  .blog-entry p {
+    font-size: 18px;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: left;
+  }
+
+  .link-container p {
+    margin-top: -2px;
+  }
+
+  #generate-link {
+    margin-left: 6px;
+  }
 }
