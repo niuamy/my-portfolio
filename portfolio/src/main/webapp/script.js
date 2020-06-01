@@ -43,7 +43,7 @@ function navbar() {
 /**
  * Fetches a message from the server and adds it to the DOM.
  */
-function getRandomQuote() {
+function getMessage() {
   // The fetch() function returns a Promise because the request is asynchronous.
   const responsePromise = fetch('/data');
 
@@ -66,7 +66,7 @@ function handleResponse(response) {
 }
 
 /** Adds a server message to the DOM. */
-function addMessageToDom(quote) {
-  const quoteContainer = document.getElementById('quote-container');
-  quoteContainer.innerText = quote;
+function addMessageToDom(msg) {
+  const messageContainer = document.getElementById('quote-container');
+  messageContainer.innerText = msg;
 }
