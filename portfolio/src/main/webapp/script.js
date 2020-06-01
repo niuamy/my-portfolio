@@ -28,15 +28,15 @@ function generateLink() {
 }
 
 /** 
- * Displays and hides navigation menu links
+ * Displays and hides navigation menu links.
  */
 function navbar() {
-  const navDisplay = document.getElementById('nav-links')
+  const navDisplay = document.getElementById('nav-links');
   
   if(navDisplay.style.display === "block") {
     navDisplay.style.display = "none";
   } else {
-    navDisplay.style.display = "block";       
+    navDisplay.style.display = "block";    
   }
 }
 
