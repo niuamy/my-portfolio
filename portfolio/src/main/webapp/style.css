@@ -21,6 +21,62 @@ a {
     text-align: center;
   }
 
+  #mobile-header {
+    font-size: 11vw;
+  }
+
+  #mobile-menu {
+    font-size: 8vw;
+    margin: -25px 50px 20px 50px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #858484;
+  }
+
+  #mobile-menu:active {
+    color: #b8b8b8;
+  }
+
+  #nav-links {
+    text-align: center;
+    margin: -20px 40px 0 40px;
+    padding: 10px;
+    font-size: 6vw;
+    display: none;
+  }
+
+  #nav-links a {
+    display: block;
+    margin: 1px;
+  }
+
+  .nav-container {
+    text-align: center;
+  }
+
+  #about-me-link {
+    border-bottom: 4px solid #bd5a5a;
+  }
+
+  #projects-link {
+    border-bottom: 4px solid #edc75f;
+  }
+
+  #contact-me-link {
+    border-bottom: 4px solid #87d3af;
+  }
+
+  #gallery-link {
+    border-bottom: 4px solid #eae2a2;
+  }
+
+  #about-photography-link {
+    border-bottom: 4px solid #66b1a2;
+  }
+
+  #blog-link {
+    border-bottom: 4px solid #a73715;
+  }
+
   h2 {
     font-size: 6vw;
   }
