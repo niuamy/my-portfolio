@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="getRandomQuote()">
     <div id="content">
       <header>
         <h1 class="main-header">Amy's Portfolio</h1>
@@ -152,6 +152,9 @@
               </p>
               <a href="#" id="generate-link" target="_blank" onclick="generateLink()">Click Me.</h1>
             </div>
+            <h2>Server Message</h2>
+            <h3>6/1/19</h3>
+            <div id="quote-container"></div>
           </div>
         </div>
       </main>
