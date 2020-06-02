@@ -19,10 +19,12 @@ import java.util.List;
 
 public class Comments {
     
-    private final ArrayList<String> commentHistory = new ArrayList<>();
-
-    public void addMessage(String text) {
-        commentHistory.add(text);
-    }
+  private final String userComment;
+  private final long timestamp;
+  
+  public Comments(String userComment, long timestamp) {
+    this.userComment = userComment;
+    this.timestamp = timestamp;
+  }
 }
 
