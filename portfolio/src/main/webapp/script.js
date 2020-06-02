@@ -44,8 +44,12 @@ function navbar() {
  * Fetches the current state of the main page and builds the UI.
  */
 function getMessage() {
-  fetch('/data').then(response => response.json()).then((comments) => {
-    const messageBody = document.getElementById('quote-container');
-    messageBody.innerText = comments.commentHistory;
+  fetch('/load-comments').then(response => response.json()).then((comments) => {
+    const messageBody = document.getElementById('comment-container');
+    comments.forEach((comment) => {
+      const commentElement = document.createElement('li');
+      commentElement.innerText = comment.userComment;
+      messageBody.appendChild(commentElement);
+    })
   });
 }
