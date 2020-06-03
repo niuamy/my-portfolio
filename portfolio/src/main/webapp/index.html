@@ -155,20 +155,24 @@
             <h2>New Comment Feature!</h2>
             <h3>5/26/20</h3>
             <div class="comment-section" id="comment-section">
-              <div class="comment-limit">
-                <label class="comment-text-design" for="order">Comment Order: </label>
-                <select name="order" class="comment-text-design" id="order" onchange="getMessage()">
-                  <option value="ascend">Newest to Oldest</option>
-                  <option value="descend">Oldest to Newest</option>
-                </select>
-                <label class="comment-text-design" for="max">Display Comments: </label>
-                <select name="max" class="comment-text-design" id="max" onchange="getMessage()">
-                  <option value="5">5</option>
-                  <option value="4">4</option>
-                  <option value="3">3</option>
-                  <option value="2">2</option>
-                  <option value="1">1</option>
-                </select>
+              <div class="comment-feature">
+                <div>
+                  <label class="comment-text-design" for="order">Comment Order: </label>
+                  <select name="order" class="comment-text-design" id="order" onchange="getMessage()">
+                    <option value="ascend">Newest to Oldest</option>
+                    <option value="descend">Oldest to Newest</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="comment-text-design" for="max">Display Comments: </label>
+                  <select name="max" class="comment-text-design" id="max" onchange="getMessage()">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
               </div>
               <div class="comment-box">
                 <ul id="comment-container"></ul>
