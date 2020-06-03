@@ -88,7 +88,7 @@ function deleteComment(comment) {
 /**
  * Sets the character limit of the comment feature.
  */
-function getMaxLength() {
+function setMaxLength() {
   const width = window.outerWidth;
   const maxLength = document.getElementById("text-input");
   if (width < 769) {
@@ -100,5 +100,5 @@ function getMaxLength() {
 
 function getMessageDetails() {
   getMessage();
-  getMaxLength();
+  setMaxLength();
 }
