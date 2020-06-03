@@ -6,7 +6,12 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+label,
+input,
+select,
+li,
+button {
   color: #858484;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -354,7 +359,7 @@ a {
   }
 
   .blog {
-    height: 390px;
+    height: 590px;
   }
 
   .blog a {
@@ -365,6 +370,7 @@ a {
 
   .blog-entry {
     margin-left: 60px;
+    margin-right: 60px;
   }
 
   .blog-entry h3 {
@@ -378,6 +384,7 @@ a {
   .link-container {
     display: flex;
     justify-content: left;
+    overflow: none;
   }
 
   .link-container p {
@@ -386,5 +393,95 @@ a {
 
   #generate-link {
     margin-left: 6px;
+  }
+
+  .comment-section {
+    width: 90%;
+    height: 400px;
+    padding-top: 45px;
+  }
+
+  .comment-section,
+  .comment-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comment-limit {
+    float: right;
+    margin: -35px 75px 5px 0;
+  }
+
+  .comment-box {
+    background-color: rgb(245, 244, 237);
+    width: 80%;
+    height: 300px;
+    border: 3px solid #a73715;
+    border-radius: 25px;
+  }
+
+  #text-input {
+    background-color: rgb(245, 244, 237);
+    width: 63%;
+    margin: 5px 0 5px 80px;
+    border: solid #a73715;
+    border-radius: 15px;
+  }
+
+  #text-input,
+  #comment-container li {
+    font-size: 17px;
+    color: #666464;
+    padding: 13px;
+  }
+
+  #submit {
+    width: 100px;
+    padding: 11px;
+    margin: 5px 0;
+    border: solid #a73715;
+    border-radius: 15px;
+  }
+
+  .comment-text-design,
+  #comment-container button {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  #max {
+    font-size: 16px;
+    border: 1px solid #b8b8b8;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+
+  #comment-container li {
+    background-color: #f8f8ef;
+    list-style-type: none;
+    border: 2px solid #a73715;
+    border-radius: 10px;
+    margin: 5px 40px 5px 0;
+  }
+
+  #comment-container button {
+    font-size: 15px;
+    float: right;
+    border: 1px solid #858484;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: -6px;
+  }
+  
+  #comment-container button,
+  #submit {
+    background-color: #a73715;
+    color: whitesmoke;
+  }
+
+  #comment-container button:hover,
+  #submit:hover {
+    background-color: #b8b8b8;
+    border-color: #b8b8b8;
   }
 }
