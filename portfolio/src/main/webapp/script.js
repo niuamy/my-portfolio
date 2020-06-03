@@ -84,3 +84,21 @@ function deleteComment(comment) {
   params.append('id', comment.id);
   return fetch('/delete-data', {method: 'POST', body: params});
 }
+
+/**
+ * Sets the character limit of the comment feature.
+ */
+function setMaxLength() {
+  const width = window.outerWidth;
+  const maxLength = document.getElementById("text-input");
+  if (width < 769) {
+    maxLength.setAttribute("maxLength","15");
+  } else {
+    maxLength.setAttribute("maxLength","75");
+  }
+}
+
+function getMessageDetails() {
+  getMessage();
+  setMaxLength();
+}
