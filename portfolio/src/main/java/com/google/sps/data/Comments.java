@@ -18,13 +18,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Comments {
-    
+  
   private final String userComment;
   private final long timestamp;
-  
-  public Comments(String userComment, long timestamp) {
+  private final long id;
+
+  public Comments(String userComment, long timestamp, long id) {
     this.userComment = userComment;
     this.timestamp = timestamp;
+    this.id = id;
   }
 }
 

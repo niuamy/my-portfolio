@@ -33,10 +33,10 @@ function generateLink() {
 function navbar() {
   const navDisplay = document.getElementById('nav-links');
   
-  if(navDisplay.style.display === "block") {
-    navDisplay.style.display = "none";
+  if(navDisplay.style.display === 'block') {
+    navDisplay.style.display = 'none';
   } else {
-    navDisplay.style.display = "block";    
+    navDisplay.style.display = 'block';    
   }
 }
 
@@ -44,12 +44,42 @@ function navbar() {
  * Fetches the current state of the main page and builds the UI.
  */
 function getMessage() {
-  fetch('/load-comments').then(response => response.json()).then((comments) => {
+  const commentLimit = document.getElementById('max').value;
+  fetch('/load-comments?max=' + commentLimit).then(response => response.json()).then((comments) => {
     const messageBody = document.getElementById('comment-container');
+    messageBody.innerText='';
     comments.forEach((comment) => {
-      const commentElement = document.createElement('li');
-      commentElement.innerText = comment.userComment;
-      messageBody.appendChild(commentElement);
+        messageBody.appendChild(createCommentElement(comment));
     })
   });
+}
+
+/**
+ * Creates an element that represents a comment, including its delete button.
+ */
+function createCommentElement(comment) {
+  const commentElement = document.createElement('li');
+  commentElement.className = 'comment';
+
+  const titleElement = document.createElement('span');
+  titleElement.innerText = comment.userComment;
+
+  const deleteButtonElement = document.createElement('button');
+  deleteButtonElement.innerText = 'Delete';
+  deleteButtonElement.addEventListener('click', () => {
+    deleteComment(comment).then(() => commentElement.remove());
+  });
+
+  commentElement.appendChild(titleElement);
+  commentElement.appendChild(deleteButtonElement);
+  return commentElement;
+}
+
+/** 
+ * Tells the server to delete the message. 
+ */
+function deleteComment(comment) {
+  const params = new URLSearchParams();
+  params.append('id', comment.id);
+  return fetch('/delete-data', {method: 'POST', body: params});
 }

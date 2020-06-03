@@ -30,6 +30,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.sps.data.Comments;
+import java.util.Iterator;
 
 /** Servlet responsible for listing comments. */
 @WebServlet("/load-comments")
@@ -37,18 +38,25 @@ public class LoadCommentsServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Query query = new Query("Comment").addSort("timestamp", SortDirection.ASCENDING);
+    Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
     List<Comments> comments = new ArrayList<>();
 
-    for (Entity entity : results.asIterable()) {
+    Iterator<Entity> commentIterator = results.asIterable().iterator();
+    int commentLimit = Integer.parseInt(request.getParameter("max"));
+  
+    int totalComments = 0;
+    while (commentIterator.hasNext() && totalComments < commentLimit) {
+      Entity entity = commentIterator.next();
       String userComment = (String) entity.getProperty("comment");
       long timestamp = (long) entity.getProperty("timestamp");
-
-      Comments comment = new Comments(userComment, timestamp);
-      comments.add(comment);
+      long id = entity.getKey().getId();
+        
+      Comments newComment = new Comments(userComment, timestamp, id);
+      comments.add(newComment);
+      totalComments++;
     }
 
     Gson gson = new Gson();
