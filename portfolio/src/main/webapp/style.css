@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 @media only screen and (max-width: 769px) {
 
   #content {
@@ -174,6 +178,67 @@ a {
 
   .blog {
     height: 200px;
+  }
+
+  .comment-box {
+    height: 240px;
+    margin: 10px 35px;
+    padding: 5px;
+    border: 3px solid #a73715;
+    border-radius: 15px;
+  }
+
+  #comment-container li {
+    padding: 8px 20px;
+    border: 2px solid #a73715;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px 20px 0 -20px;
+    font-size: 4vw;
+  }
+
+  #comment-container button {
+    float: right;
+  }
+
+  #text-input {
+    padding: 10px;
+    width: 55%;
+    border: 2px solid #a73715;
+    border-radius: 10px;
+    background-color: #f3f3ec;
+    font-size: 4vw;
+  }
+
+  #order,
+  #max,
+  #submit,
+  #comment-container button {
+    background-color: #a73715;
+    color: whitesmoke;
+    border: 1px solid #a73715;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 4vw;
+  }
+
+  #comment-container button {
+    margin-top: -5px;
+  }
+
+  .comment-feature {
+    text-align: left;
+    margin-left: 40px;
+    font-size: 4.5vw;
+  }
+
+  .comment-feature div {
+    margin: 10px;
+  }
+
+  #submit {
+    padding: 8px 12px;
+    font: 4vw;
   }
 }
 
@@ -408,9 +473,13 @@ a {
     margin-right: auto;
   }
 
-  .comment-limit {
+  .comment-feature {
     float: right;
-    margin: -35px 75px 5px 0;
+    margin: -65px 75px 5px 0;
+  }
+
+  .comment-feature div {
+    margin-bottom: 5px;
   }
 
   .comment-box {
@@ -469,7 +538,6 @@ a {
 
   #comment-container li {
     background-color: #f8f8ef;
-    list-style-type: none;
     border: 2px solid #a73715;
     border-radius: 10px;
     margin: 5px 40px 5px 0;
