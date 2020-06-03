@@ -38,8 +38,25 @@ public class LoadCommentsServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
+    List<Comments> comments = getCommentList(request);
+    Gson gson = new Gson();
+    response.setContentType("application/json;");
+    response.getWriter().println(gson.toJson(comments));
+  }
 
+  private Query getCommentOrder(HttpServletRequest request) {
+    String commentOrder = request.getParameter("order");;
+    Query query;
+    if (commentOrder.equals("ascend")) {
+      query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
+    } else {
+      query = new Query("Comment").addSort("timestamp", SortDirection.ASCENDING);  
+    }
+    return query;
+  }
+
+  private List<Comments> getCommentList(HttpServletRequest request) {
+    Query query = getCommentOrder(request);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
     List<Comments> comments = new ArrayList<>();
@@ -59,9 +76,6 @@ public class LoadCommentsServlet extends HttpServlet {
       totalComments++;
     }
 
-    Gson gson = new Gson();
-
-    response.setContentType("application/json;");
-    response.getWriter().println(gson.toJson(comments));
+    return comments;
   }
 }
