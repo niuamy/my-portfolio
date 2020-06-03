@@ -156,8 +156,15 @@
             <h3>5/26/20</h3>
             <form action="/data" method="POST">
                 <input type="text" name="text-input"/>
-                <input type="submit"/>
+                <input type="submit" onclick="getMessage()"/>
             </form>
+            <select name="max" id="max" onchange="getMessage()">
+                  <option value="5">5</option>
+                  <option value="4">4</option>
+                  <option value="3">3</option>
+                  <option value="2">2</option>
+                  <option value="1">1</option>
+            </select>
             <ul id="comment-container"></ul>
             <h2>Secret Link</h2>
             <h3>12/25/19</h3>
