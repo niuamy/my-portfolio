@@ -45,7 +45,8 @@ function navbar() {
  */
 function getMessage() {
   const commentLimit = document.getElementById('max').value;
-  fetch('/load-comments?max=' + commentLimit).then(response => response.json()).then((comments) => {
+  const commentOrder = document.getElementById('order').value;
+  fetch('/load-comments?max=' + commentLimit + '&order=' + commentOrder).then(response => response.json()).then((comments) => {
     const messageBody = document.getElementById('comment-container');
     messageBody.innerText='';
     comments.forEach((comment) => {
