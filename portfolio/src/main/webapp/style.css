@@ -181,7 +181,7 @@ li {
   }
 
   .comment-box {
-    height: 240px;
+    height: 250px;
     margin: 10px 35px;
     padding: 5px;
     border: 3px solid #a73715;
@@ -189,7 +189,7 @@ li {
   }
 
   #comment-container li {
-    padding: 8px 10px;
+    padding: 9px 10px;
     border: 2px solid #a73715;
     border-radius: 10px;
     text-align: left;
@@ -214,6 +214,7 @@ li {
   }
 
   #order,
+  #name,
   #max,
   #submit,
   #comment-container button {
