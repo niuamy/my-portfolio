@@ -179,8 +179,8 @@
               </div>
               <div class="comment-input">
                 <form action="/data" method="POST">
-                  <input type="text" name="name-input" id="name-input" placeholder="first name" onchange="setSubmitButtonUsability()"/>
-                  <input type="text" name="text-input" id="text-input" maxlength="75" placeholder="enter a comment" onchange="setSubmitButtonUsability()"/>
+                  <input type="text" name="name-input" id="name-input" maxlength="10" placeholder="first name" onchange="setSubmitButtonUsability()"/>
+                  <input type="text" name="text-input" id="text-input" maxlength="65" placeholder="enter a comment" onchange="setSubmitButtonUsability()"/>
                   <input type="submit" class="comment-text-design" id="submit" onclick="getMessage()"/>
                 </form>
               </div>
