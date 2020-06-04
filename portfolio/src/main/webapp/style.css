@@ -490,16 +490,25 @@ li {
     border-radius: 25px;
   }
 
+  #name-input {
+    margin-left: 80px;
+    width: 10%;
+  }
+
   #text-input {
+    width: 48%;
+  }
+
+  #text-input,
+  #name-input {
     background-color: rgb(245, 244, 237);
-    width: 63%;
-    margin: 5px 0 5px 80px;
     border: solid #a73715;
     border-radius: 15px;
   }
 
   #text-input,
-  #comment-container li {
+  #comment-container li,
+  #name-input {
     font-size: 17px;
     color: #666464;
     padding: 13px;

@@ -63,7 +63,7 @@ function createCommentElement(comment) {
   commentElement.className = 'comment';
 
   const titleElement = document.createElement('span');
-  titleElement.innerText = comment.userComment;
+  titleElement.innerText = comment.userName + ': ' + comment.userComment;
 
   const deleteButtonElement = document.createElement('button');
   deleteButtonElement.innerText = 'Delete';
@@ -98,7 +98,21 @@ function setMaxLength() {
   }
 }
 
+/**
+ * Disables or enables comment submit button based on whether required fields are filled in. 
+ */
+function setSubmitButtonUsability(){
+  const nameInput = document.getElementById("name-input").value;
+  const textInput = document.getElementById("text-input").value;
+  if (nameInput.length == 0 || textInput.length == 0) {
+    document.getElementById('submit').disabled = true;
+  } else {
+    document.getElementById('submit').disabled = false;
+  }
+}
+
 function getMessageDetails() {
   getMessage();
   setMaxLength();
+  setSubmitButtonUsability();
 }
