@@ -299,11 +299,13 @@ li {
   .main-header {
     font-size: 36px;
     text-align: center;
+    animation: down 2s linear .9s;
   }
 
   .nav-desktop {
     text-align: center;
     margin-bottom: 15px;
+    animation: fade-in 2s linear .9s;
   }
 
   .nav-desktop a {
@@ -331,6 +333,14 @@ li {
     justify-content: space-evenly;
   }
 
+  .first-row {
+    animation: right 2s linear .9s;
+  }
+
+  .second-row {
+    animation: left 2s linear .9s;  
+  }
+
   img {
     margin: 8px 0px;
   }
@@ -349,6 +359,7 @@ li {
     display: inline-block;
     padding: 8px;
     transform: rotate(45deg);
+    animation: fade-in 2s linear .9s;
   }
 
   .arrow-transition:hover {
@@ -391,6 +402,19 @@ li {
   #my-projects-img {
     float: left;
     margin: 130px 20px 0 0;
+    animation: right 2s linear .9s;
+  }
+
+  #tag-cloud-generator {
+    animation: down 1.3s linear .9s;
+  }
+
+  #gpa-calculator {
+    animation: down 1.3s linear 1s; 
+  }
+
+  #mysite {
+    animation: down 1.3s linear 1.1s;
   }
 
   .contact-me-desktop {
@@ -400,6 +424,18 @@ li {
     justify-content: space-evenly;
   }
 
+  #contact-me-img {
+    animation: fade-in 1.5s linear .8s; 
+  }
+
+  #linkedin-img {
+    animation: fade-in 1.5s linear 1s;  
+  }
+
+  #github-img {
+    animation: fade-in 1.5s linear 1.2s;  
+  }
+
   .gallery {
     height: 525px;
   }
@@ -407,6 +443,7 @@ li {
   #gallery-about-img {
     position: absolute;
     margin-top: 80px;
+    animation: right 2s linear .9s;
   }
 
   #about-my-photography {
@@ -424,15 +461,18 @@ li {
 
   #puzzle-img {
     margin: -265px 0 0 360px;
+    animation: down 2s linear .9s;
   }
 
   #mirror-img {
     margin: -205px 0 0 565px;
     z-index: +1;
+    animation: up 2s linear .9s;
   }
 
   #bench-img {
     margin: -245px 0 0 765px;
+    animation: down 2s linear .9s;
   }
 
   .blog {
@@ -443,6 +483,18 @@ li {
     display: flex;
     justify-content: space-evenly;
     margin: 0 20px;
+  }
+
+  #blog-img-left {
+    animation: right 2s linear .9s;  
+  }
+
+  #blog-img-center {
+    animation: fade-in 2s linear .9s;  
+  }
+
+  #blog-img-right {
+    animation: left 2s linear .9s;  
   }
 
   .blog-entry {
@@ -516,7 +568,7 @@ li {
     background-color: rgb(245, 244, 237);
     border: solid #a73715;
     border-radius: 15px;
-  }
+}
 
   #text-input,
   #comment-container li,
@@ -588,11 +640,15 @@ li {
   }
 
   @keyframes right { 
+    from {opacity:0;}
+    to   {opacity:1;}   
     0%   {transform: translateX(-1rem);}
     100% {transform: translateX(0);}
   }
 
-  @keyframes left {
+  @keyframes left { 
+    from {opacity:0;}
+    to   {opacity:1;} 
     0%   {transform: translateX(1rem);}
     100% {transform: translateX(0);}
   }
@@ -600,5 +656,19 @@ li {
   @keyframes fade-in {
     from {opacity:0;}
     to   {opacity:1;} 
+  }
+
+  @keyframes up { 
+    from {opacity:0;}
+    to   {opacity:1;}   
+    0%   {transform: translateY(1rem);}
+    100% {transform: translateY(0);}
+  }
+
+  @keyframes down { 
+    from {opacity:0;}
+    to   {opacity:1;}   
+    0%   {transform: translateY(-1rem);}
+    100% {transform: translateY(0);}
   }
 }
