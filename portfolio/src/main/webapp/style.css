@@ -467,7 +467,7 @@ li {
 
   .comment-section {
     width: 90%;
-    height: 400px;
+    height: 450px;
     padding-top: 45px;
   }
 
@@ -489,9 +489,10 @@ li {
   .comment-box {
     background-color: rgb(245, 244, 237);
     width: 80%;
-    height: 300px;
+    height: 310px;
     border: 3px solid #a73715;
     border-radius: 25px;
+    margin-top: 50px;
   }
 
   #name-input {
@@ -533,7 +534,8 @@ li {
   }
 
   #max,
-  #order {
+  #order,
+  #name {
     font-size: 16px;
     border: 1px solid #b8b8b8;
     border-radius: 5px;
@@ -541,7 +543,8 @@ li {
   }
 
   #max:hover,
-  #order:hover {
+  #order:hover,
+  #name:hover {
     background-color: whitesmoke;
   }
 

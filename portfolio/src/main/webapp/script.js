@@ -46,11 +46,23 @@ function navbar() {
 function getMessage() {
   const commentLimit = document.getElementById('max').value;
   const commentOrder = document.getElementById('order').value;
-  fetch('/load-comments?max=' + commentLimit + '&order=' + commentOrder).then(response => response.json()).then((comments) => {
+  const commentName = document.getElementById('name').value;
+  fetch('/load-comments?max=' + commentLimit + '&order=' + commentOrder + '&name=' + commentName).then(response => response.json()).then((comments) => {
     const messageBody = document.getElementById('comment-container');
+    const nameSelection = document.getElementById('name');
     messageBody.innerText='';
     comments.forEach((comment) => {
-        messageBody.appendChild(createCommentElement(comment));
+      messageBody.appendChild(createCommentElement(comment));
+
+      // Adds names as a selection option based on whether it's unique.
+      var isUnique = true;
+      const nameSelectionChildren = document.getElementById('name').children;
+      var i = 0;
+      while (i < nameSelectionChildren.length && isUnique) {
+        if (nameSelectionChildren[i].value === comment.userName) isUnique = false; 
+        i += 1;
+      }
+      if (isUnique) nameSelection.appendChild(createOptionElement(comment));
     })
   });
 }
@@ -73,6 +85,18 @@ function createCommentElement(comment) {
 
   commentElement.appendChild(titleElement);
   commentElement.appendChild(deleteButtonElement);
+  return commentElement;
+}
+
+/**
+ * Creates an option element that represents a name.
+ */
+function createOptionElement(comment) {  
+  const commentElement = document.createElement('option');
+  commentElement.innerText = comment.userName;
+  const nameValue = document.createAttribute("value");
+  nameValue.value = comment.userName;
+  commentElement.setAttributeNode(nameValue);
   return commentElement;
 }
 

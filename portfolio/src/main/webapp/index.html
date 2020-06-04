@@ -156,6 +156,12 @@
             <h3>5/26/20</h3>
             <div class="comment-section" id="comment-section">
               <div class="comment-feature">
+                <div> 
+                  <label class="comment-text-design" for="name">Filter: </label>
+                  <select name="order" class="comment-text-design" id="name" onchange="getMessage()">
+                    <option value="all">All</option>
+                  </select>  
+                </div>  
                 <div>
                   <label class="comment-text-design" for="order">Comment Order: </label>
                   <select name="order" class="comment-text-design" id="order" onchange="getMessage()">
