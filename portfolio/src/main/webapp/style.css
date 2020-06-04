@@ -189,24 +189,21 @@ li {
   }
 
   #comment-container li {
-    padding: 8px 10px;
+    padding: 8px 20px;
     border: 2px solid #a73715;
     border-radius: 10px;
     text-align: left;
-    margin: 5px 10px 0 -30px;
+    margin: 5px 20px 0 -20px;
     font-size: 4vw;
   }
 
   #comment-container button {
     float: right;
-    margin-top: -5px;
-    margin-right: -5px;
   }
 
-  #text-input,
-  #name-input {
+  #text-input {
     padding: 10px;
-    width: 70%;
+    width: 55%;
     border: 2px solid #a73715;
     border-radius: 10px;
     background-color: #f3f3ec;
@@ -225,6 +222,10 @@ li {
     font-size: 4vw;
   }
 
+  #comment-container button {
+    margin-top: -5px;
+  }
+
   .comment-feature {
     text-align: left;
     margin-left: 40px;
@@ -236,13 +237,8 @@ li {
   }
 
   #submit {
-    padding: 10px;
+    padding: 8px 12px;
     font: 4vw;
-    width: 76%;
-  }
-
-  .comment-input input {
-    margin-bottom: 8px;
   }
 }
 
