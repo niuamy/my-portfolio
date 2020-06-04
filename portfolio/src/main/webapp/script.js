@@ -93,7 +93,7 @@ function setMaxLength() {
   const maxLengthComment = document.getElementById("text-input");
   const maxLengthName = document.getElementById("name-input");
   if (width < 769) {
-    maxLengthComment.setAttribute("maxlength","10");
+    maxLengthComment.setAttribute("maxlength","15");
     maxLengthName.setAttribute("maxlength", "5");
   } else {
     maxLengthComment.setAttribute("maxlength","65");
