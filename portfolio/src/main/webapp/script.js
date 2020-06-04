@@ -90,11 +90,14 @@ function deleteComment(comment) {
  */
 function setMaxLength() {
   const width = window.outerWidth;
-  const maxLength = document.getElementById("text-input");
+  const maxLengthComment = document.getElementById("text-input");
+  const maxLengthName = document.getElementById("name-input");
   if (width < 769) {
-    maxLength.setAttribute("maxLength","15");
+    maxLengthComment.setAttribute("maxlength","15");
+    maxLengthName.setAttribute("maxlength", "5");
   } else {
-    maxLength.setAttribute("maxLength","75");
+    maxLengthComment.setAttribute("maxlength","65");
+    maxLengthName.setAttribute("maxlength", "10")
   }
 }
 
