@@ -54,7 +54,7 @@ function getMessage() {
     comments.forEach((comment) => {
       messageBody.appendChild(createCommentElement(comment));
 
-      //Adds names as a selection option based on whether it's unique.
+      // Adds names as a selection option based on whether it's unique.
       var isUnique = true;
       const nameSelectionChildren = document.getElementById('name').children;
       var i = 0;

@@ -71,7 +71,7 @@ public class LoadCommentsServlet extends HttpServlet {
     int commentLimit = Integer.parseInt(request.getParameter("max"));
     String commentName = request.getParameter("name");
     
-    //Filters comments by comment limit.
+    // Filters comments by comment limit.
     int totalComments = 0;
     while (commentIterator.hasNext() && totalComments < commentLimit) {
       Entity entity = commentIterator.next();
