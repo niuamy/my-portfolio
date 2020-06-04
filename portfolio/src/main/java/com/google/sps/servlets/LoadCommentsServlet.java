@@ -69,7 +69,9 @@ public class LoadCommentsServlet extends HttpServlet {
 
     Iterator<Entity> commentIterator = results.asIterable().iterator();
     int commentLimit = Integer.parseInt(request.getParameter("max"));
-  
+    String commentName = request.getParameter("name");
+    
+    //Filters comments by comment limit.
     int totalComments = 0;
     while (commentIterator.hasNext() && totalComments < commentLimit) {
       Entity entity = commentIterator.next();
@@ -77,9 +79,12 @@ public class LoadCommentsServlet extends HttpServlet {
       String userComment = (String) entity.getProperty("comment");
       long timestamp = (long) entity.getProperty("timestamp");
       long id = entity.getKey().getId();
-        
-      Comments newComment = new Comments(userName, userComment, timestamp, id);
-      comments.add(newComment);
+
+      // Filters comments by name.
+      if(commentName.equals("all") || commentName.equals(userName)) {
+        Comments newComment = new Comments(userName, userComment, timestamp, id);
+        comments.add(newComment);
+      } 
       totalComments++;
     }
 
