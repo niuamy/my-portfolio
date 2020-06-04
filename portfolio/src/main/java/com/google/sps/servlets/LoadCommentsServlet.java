@@ -47,7 +47,7 @@ public class LoadCommentsServlet extends HttpServlet {
   /**
    * Determines the order in which the comments are displayed.
    */
-  private Query setCommentOrder(HttpServletRequest request) {
+  private Query getCommentOrder(HttpServletRequest request) {
     String commentOrder = request.getParameter("order");;
     Query query;
     if (commentOrder.equals("ascend")) {
@@ -62,7 +62,7 @@ public class LoadCommentsServlet extends HttpServlet {
    * Retrieves and stores comment information in a List.
    */
   private List<Comments> getCommentList(HttpServletRequest request) {
-    Query query = setCommentOrder(request);
+    Query query = getCommentOrder(request);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
     List<Comments> comments = new ArrayList<>();
