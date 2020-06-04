@@ -43,8 +43,11 @@ public class LoadCommentsServlet extends HttpServlet {
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(comments));
   }
-
-  private Query getCommentOrder(HttpServletRequest request) {
+  
+  /**
+   * Determines the order in which the comments are displayed.
+   */
+  private Query setCommentOrder(HttpServletRequest request) {
     String commentOrder = request.getParameter("order");;
     Query query;
     if (commentOrder.equals("ascend")) {
@@ -55,8 +58,11 @@ public class LoadCommentsServlet extends HttpServlet {
     return query;
   }
 
+  /**
+   * Retrieves and stores comment information in a List.
+   */
   private List<Comments> getCommentList(HttpServletRequest request) {
-    Query query = getCommentOrder(request);
+    Query query = setCommentOrder(request);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
     List<Comments> comments = new ArrayList<>();
@@ -67,11 +73,12 @@ public class LoadCommentsServlet extends HttpServlet {
     int totalComments = 0;
     while (commentIterator.hasNext() && totalComments < commentLimit) {
       Entity entity = commentIterator.next();
+      String userName = (String) entity.getProperty("name");
       String userComment = (String) entity.getProperty("comment");
       long timestamp = (long) entity.getProperty("timestamp");
       long id = entity.getKey().getId();
         
-      Comments newComment = new Comments(userComment, timestamp, id);
+      Comments newComment = new Comments(userName, userComment, timestamp, id);
       comments.add(newComment);
       totalComments++;
     }

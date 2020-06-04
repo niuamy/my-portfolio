@@ -19,11 +19,13 @@ import java.util.List;
 
 public class Comments {
   
+  private final String userName;
   private final String userComment;
   private final long timestamp;
   private final long id;
 
-  public Comments(String userComment, long timestamp, long id) {
+  public Comments(String userName, String userComment, long timestamp, long id) {
+    this.userName = userName;
     this.userComment = userComment;
     this.timestamp = timestamp;
     this.id = id;
