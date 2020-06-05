@@ -526,7 +526,7 @@ li {
 
   .comment-section {
     width: 90%;
-    height: 450px;
+    height: 30%;
     padding-top: 45px;
   }
 
@@ -538,7 +538,7 @@ li {
 
   .comment-feature {
     float: right;
-    margin: -65px 75px 5px 0;
+    margin: 20px 100px 10px 0;
   }
 
   .comment-feature div {
@@ -547,28 +547,39 @@ li {
 
   .comment-box {
     background-color: rgb(245, 244, 237);
-    width: 80%;
-    height: 310px;
-    border: 3px solid #a73715;
-    border-radius: 25px;
-    margin-top: 50px;
+    width: 77%;
+    height: 330px;
+    margin-top: 130px;
+    border: 2px solid #a73715;
+    padding: 5px 0 30px 0;
+  }
+
+  .comment-box h2 {
+    padding-left: 30px;  
+  }
+
+  .comment-input {
+    border: 2px solid #a73715;  
+    width: 70%;
+    padding: 0 30px 20px 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #name-input {
-    margin-left: 80px;
-    width: 10%;
+    width: 15%;
   }
 
   #text-input {
-    width: 48%;
+    width: 70%;
   }
 
   #text-input,
   #name-input {
     background-color: rgb(245, 244, 237);
-    border: solid #a73715;
-    border-radius: 15px;
-}
+    border: 2px solid #a73715;
+    margin-bottom: 8px;
+  }  
 
   #text-input,
   #comment-container li,
@@ -583,7 +594,6 @@ li {
     padding: 11px;
     margin: 5px 0;
     border: solid #a73715;
-    border-radius: 15px;
   }
 
   .comment-text-design,
@@ -597,7 +607,6 @@ li {
   #name {
     font-size: 16px;
     border: 1px solid #b8b8b8;
-    border-radius: 5px;
     padding: 2px 5px;
   }
 
@@ -612,10 +621,8 @@ li {
   }
 
   #comment-container li {
-    background-color: #f8f8ef;
-    border: 2px solid #a73715;
-    border-radius: 10px;
-    margin: 5px 40px 5px 0;
+    border-bottom: 2px solid #a73715;
+    margin: 5px 30px 5px -5px;
   }
 
   #comment-container li:hover {
@@ -626,7 +633,6 @@ li {
     font-size: 15px;
     float: right;
     border: 1px solid #858484;
-    border-radius: 5px;
     padding: 6px;
     margin-top: -6px;
   }
