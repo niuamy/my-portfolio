@@ -568,7 +568,7 @@ li {
     background-color: rgb(245, 244, 237);
     border: solid #a73715;
     border-radius: 15px;
-}
+  }
 
   #text-input,
   #comment-container li,
@@ -620,6 +620,11 @@ li {
 
   #comment-container li:hover {
     box-shadow: 2px 2px 10px 8px #b8b8b8;
+  }
+
+  .heart {
+    float: right;
+    margin: -2px 11px 0 0;
   }
 
   #comment-container button {
