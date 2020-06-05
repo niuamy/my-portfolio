@@ -161,6 +161,14 @@
             <h2>New Comment Feature!</h2>
             <h3>5/26/20</h3>
             <div class="comment-section" id="comment-section">
+              <div class="comment-input">
+                <h2>Leave Me a Comment!</h2>  
+                <form action="/data" method="POST">
+                  <input type="text" name="name-input" id="name-input" maxlength="10" placeholder="first name" onchange="setSubmitButtonUsability()"/><br/>
+                  <input type="text" name="text-input" id="text-input" maxlength="65" placeholder="enter a comment" onchange="setSubmitButtonUsability()"/><br/>
+                  <input type="submit" class="comment-text-design" id="submit" onclick="getMessage()"/>
+                </form>
+              </div>  
               <div class="comment-feature">
                 <div> 
                   <label class="comment-text-design" for="name">Filter: </label>
@@ -187,14 +195,8 @@
                 </div>
               </div>
               <div class="comment-box">
+                <h2>Comments:</h2>  
                 <ul id="comment-container"></ul>
-              </div>
-              <div class="comment-input">
-                <form action="/data" method="POST">
-                  <input type="text" name="name-input" id="name-input" maxlength="10" placeholder="first name" onchange="setSubmitButtonUsability()"/>
-                  <input type="text" name="text-input" id="text-input" maxlength="65" placeholder="enter a comment" onchange="setSubmitButtonUsability()"/>
-                  <input type="submit" class="comment-text-design" id="submit" onclick="getMessage()"/>
-                </form>
               </div>
             </div>
             <h2>Secret Link</h2>
