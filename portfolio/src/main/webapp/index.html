@@ -5,6 +5,7 @@
     <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCmMqHxWrXf5NxhXaUY5NIWEFyjXVgyGs"></script>
     <script src="script.js"></script>
   </head>
   <body onload="getMessageDetails()">
@@ -155,11 +156,13 @@
             <img src="images/blog.PNG" id="blog-img-right" alt="Blog" width="390" height="110">
           </a>
           <div class="blog-entry">
-            <h2>My Hidden Talent</h2>
-            <h3>5/27/20</h3>
-            <p>Ever since I was little, I've excelled at untying knots. There's nothing else really to it.</p>
+            <div class="desktop-feature">  
+              <h2>Google Maps!</h2>
+              <h3>6/8/20</h2>
+              <div id="map"></div>
+            </div>  
             <h2>New Comment Feature!</h2>
-            <h3>5/26/20</h3>
+            <h3>6/1/20</h3>
             <div class="comment-section" id="comment-section">
               <div class="comment-input">
                 <h2>Leave Me a Comment!</h2>  
@@ -199,6 +202,9 @@
                 <ul id="comment-container"></ul>
               </div>
             </div>
+            <h2>My Hidden Talent</h2>
+            <h3>5/27/20</h3>
+            <p>Ever since I was little, I've excelled at untying knots. There's nothing else really to it.</p>
             <h2>Secret Link</h2>
             <h3>12/25/19</h3>
             <div class="link-container">

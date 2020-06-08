@@ -94,7 +94,8 @@ li {
   #my-projects-img,
   .contact-me-desktop,
   .gallery a img,
-  .blog img {
+  .blog img,
+  .desktop-feature {
     display: none;
   }
 
@@ -217,7 +218,8 @@ li {
   #my-projects-img,
   .contact-me-desktop,
   .gallery a img,
-  .blog img {
+  .blog img,
+  .desktop-feature {
     display:block;
   }
 
@@ -616,6 +618,12 @@ li {
   #submit:hover {
     background-color: #236AB9;
     border-color: #236AB9;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+    border: 2px solid #133863;
   }
 
   @keyframes right { 
