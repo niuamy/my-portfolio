@@ -171,11 +171,11 @@ function setSubmitButtonUsability(){
  * Toggles between an empty heart and a filled heart image.
  */
 function toggleHeart(heart) {
-  const src = ['https://8080-1bb1af5c-83cb-4c6f-a4de-34b9340e211d.us-east1.cloudshell.dev/images/emptyHeart.png','https://8080-1bb1af5c-83cb-4c6f-a4de-34b9340e211d.us-east1.cloudshell.dev/images/filledHeart.png'];  
-  if (heart.src === src[0]) {
-    heart.src = src[1];  
+  const src = ['images/emptyHeart.png','images/filledHeart.png'];  
+  if (heart.getAttribute('src') === src[1]) {
+    heart.src = 'images/emptyHeart.png';
   } else {
-    heart.src = src[0];
+    heart.src = 'images/filledHeart.png';
   }
 }
 
