@@ -183,9 +183,13 @@ function toggleHeart(heart) {
  * Creates a map and adds it to the page.
  */
 function createMap() {
+  const googleplex = {lat: 37.422, lng: -122.084};
   const map = new google.maps.Map(
     document.getElementById('map'),
-    {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+    {center: googleplex, zoom: 16});
+  const image = 'images/marker.png';
+  const marker = new google.maps.Marker({position: googleplex, map: map, animation: google.maps.Animation.DROP});
+  const draggableMarker = new google.maps.Marker({position: {lat: 37.422, lng: -122.0835}, map: map, title: "drag me", icon: image, draggable: true, animation: google.maps.Animation.DROP});
 }
 
 function getMessageDetails() {
