@@ -76,7 +76,9 @@ function createCommentElement(comment) {
 
   const titleElement = document.createElement('span');
   titleElement.innerText = comment.userName + ': ' + comment.userComment;
-
+  
+  const heartElement = createHeartElement('images/emptyHeart.png','heart');
+  
   const deleteButtonElement = document.createElement('button');
   deleteButtonElement.innerText = 'Delete';
   deleteButtonElement.addEventListener('click', () => {
@@ -85,7 +87,34 @@ function createCommentElement(comment) {
 
   commentElement.appendChild(titleElement);
   commentElement.appendChild(deleteButtonElement);
+  commentElement.appendChild(heartElement);
   return commentElement;
+}
+
+
+/**
+ * Creates a heart image element.
+ */
+function createHeartElement(src, className) {
+  const heartElement = document.createElement('img');
+  const heartSrc = document.createAttribute('src');
+  const heartClass = document.createAttribute('class');
+  const width = document.createAttribute('width');
+  const height = document.createAttribute('height');
+  const toggle = document.createAttribute('onclick');
+
+  heartSrc.value = src;
+  heartClass.value = className;
+  width.value='25';
+  height.value='23';
+  toggle.value='toggleHeart(this)';
+
+  heartElement.setAttributeNode(heartSrc);
+  heartElement.setAttributeNode(heartClass);
+  heartElement.setAttributeNode(width);
+  heartElement.setAttributeNode(height);
+  heartElement.setAttributeNode(toggle);
+  return heartElement;
 }
 
 /**
@@ -94,7 +123,7 @@ function createCommentElement(comment) {
 function createOptionElement(comment) {  
   const commentElement = document.createElement('option');
   commentElement.innerText = comment.userName;
-  const nameValue = document.createAttribute("value");
+  const nameValue = document.createAttribute('value');
   nameValue.value = comment.userName;
   commentElement.setAttributeNode(nameValue);
   return commentElement;
@@ -135,6 +164,18 @@ function setSubmitButtonUsability(){
     document.getElementById('submit').disabled = true;
   } else {
     document.getElementById('submit').disabled = false;
+  }
+}
+
+/**
+ * Toggles between an empty heart and a filled heart image.
+ */
+function toggleHeart(heart) {
+  const src = ['images/emptyHeart.png','images/filledHeart.png'];  
+  if (heart.getAttribute('src') === src[1]) {
+    heart.src = 'images/emptyHeart.png';
+  } else {
+    heart.src = 'images/filledHeart.png';
   }
 }
 
