@@ -187,9 +187,22 @@ function createMap() {
   const map = new google.maps.Map(
     document.getElementById('map'),
     {center: googleplex, zoom: 16});
+
   const image = 'images/marker.png';
   const marker = new google.maps.Marker({position: googleplex, map: map, animation: google.maps.Animation.DROP});
-  const draggableMarker = new google.maps.Marker({position: {lat: 37.422, lng: -122.0835}, map: map, title: "drag me", icon: image, draggable: true, animation: google.maps.Animation.DROP});
+  const draggableMarker = new google.maps.Marker({position: {lat: 37.422, lng: -122.083}, map: map, title: "drag me", icon: image, draggable: true, animation: google.maps.Animation.DROP});
+	
+  const googleplexInfo = `<h2>Googleplex</h2><p>This is where I would've worked if not for Covid-19</p><img src="images/googleplex.jpg" alt="Googleplex" width="350">`;
+  const dragMarkerInfo = '<p>I am a draggable marker. Drag me.</p>';
+  const googleplexInfoWindow = new google.maps.InfoWindow({content: googleplexInfo}); 
+  const dragMarkerInfoWindow = new google.maps.InfoWindow({content: dragMarkerInfo});
+
+  marker.addListener('click', function() {
+    googleplexInfoWindow.open(map, marker);
+  });
+  draggableMarker.addListener('click', function() {
+    dragMarkerInfoWindow.open(map, draggableMarker);
+  });
 }
 
 function getMessageDetails() {
