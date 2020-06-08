@@ -1,5 +1,5 @@
 body {
-  background-color: #f3f3ec;
+  background-color: #E1ECF9;
 }
 
 h1,
@@ -12,7 +12,7 @@ input,
 select,
 li,
 button {
-  color: #858484;
+  color: #133863;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -38,11 +38,11 @@ li {
     font-size: 9vw;
     margin: -25px 30px 0 30px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #858484;
+    border-bottom: 3px solid #236AB9;
   }
 
   #mobile-menu:active {
-    color: #b8b8b8;
+    color: #236AB9;
   }
 
   #nav-links {
@@ -56,6 +56,7 @@ li {
   #nav-links a {
     display: block;
     margin: 1px;
+    border-bottom: 3px solid #236AB9;
   }
 
   .nav-container {
@@ -64,27 +65,6 @@ li {
 
   #about-me-link {
     padding-top: 20px;
-    border-bottom: 4px solid #bd5a5a;
-  }
-
-  #projects-link {
-    border-bottom: 4px solid #edc75f;
-  }
-
-  #contact-me-link {
-    border-bottom: 4px solid #87d3af;
-  }
-
-  #gallery-link {
-    border-bottom: 4px solid #eae2a2;
-  }
-
-  #about-photography-link {
-    border-bottom: 4px solid #66b1a2;
-  }
-
-  #blog-link {
-    border-bottom: 4px solid #a73715;
   }
 
   h2 {
@@ -102,7 +82,7 @@ li {
   }
 
   img {
-    border: 5px solid #eae2a2;
+    border: 5px solid #236AB9;
     padding: 15px;
     margin: 10px;
   }
@@ -136,30 +116,11 @@ li {
     padding-bottom: 10px;
     border-bottom: 3px solid;
     margin: 25px 30px;
-  }
-
-  #mobile-about-me-header {
-    border-color: #bd5a5a;
-  }
-
-  #mobile-projects-header {
-    border-color: #edc75f;
-  }
-
-  #mobile-contact-me-header {
-    border-color: #87d3af;
-  }
-
-  #mobile-gallery-header {
-    border-color: #eae2a2;
-  }
-
-  #mobile-blog-header {
-    border-color: #a73715;
+    border-color: #236AB9;
   }
 
   .contact-me-mobile h2 {
-    border: 2px solid #87d3af;
+    border: 2px solid #236AB9;
     margin: 15px 110px;
     padding: 15px;
     border-radius: 5%;
@@ -184,13 +145,13 @@ li {
     height: 250px;
     margin: 10px 35px;
     padding: 5px;
-    border: 3px solid #a73715;
+    border: 3px solid #133863;
     border-radius: 5px;
   }
 
   #comment-container li {
     padding: 9px 10px;
-    border: 2px solid #a73715;
+    border: 2px solid #133863;
     border-radius: 5px;
     text-align: left;
     margin: 5px 10px 0 -30px;
@@ -207,9 +168,9 @@ li {
   #name-input {
     padding: 10px;
     width: 74%;
-    border: 2px solid #a73715;
+    border: 2px solid #133863;
     border-radius: 5px;
-    background-color: #f3f3ec;
+    background-color: #E1ECF9;
     font-size: 4vw;
   }
 
@@ -218,9 +179,9 @@ li {
   #max,
   #submit,
   #comment-container button {
-    background-color: #a73715;
+    background-color: #133863;
     color: whitesmoke;
-    border: 1px solid #a73715;
+    border: 1px solid #133863;
     border-radius: 5px;
     padding: 4px;
     font-size: 4vw;
@@ -282,7 +243,7 @@ li {
   h3,
   p,
   a {
-    color: #858484;
+    color: #133863;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
@@ -315,11 +276,11 @@ li {
   }
 
   a:hover {
-    color:#b8b8b8;
+    color:#236AB9;
   }
 
   a:hover img {
-    box-shadow: 2px 2px 10px 8px #d6d6d6da;
+    box-shadow: 2px 2px 10px 8px rgb(193, 219, 248);
     transition: all .3s ease;
   }
 
@@ -354,7 +315,7 @@ li {
   }
 
   .arrow-transition {
-    border: solid #b8b8b8;
+    border: solid #133863;
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 8px;
@@ -363,7 +324,7 @@ li {
   }
 
   .arrow-transition:hover {
-    border: solid #858484;
+    border: solid #236AB9;
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 8px;
@@ -450,9 +411,10 @@ li {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     position: relative;
-    color: #f7f8e9;
+    color: #E1ECF9;
     padding-top: 185px;
     margin: 0px 680px 0 115px;
+    animation: right 2s linear .9s;
   }
 
   .gallery-imgs img {
@@ -546,11 +508,11 @@ li {
   }
 
   .comment-box {
-    background-color: rgb(245, 244, 237);
+    background-color: #E1ECF9;
     width: 77%;
     height: 330px;
     margin-top: 130px;
-    border: 2px solid #a73715;
+    border: 2px solid #133863;
     padding: 5px 0 30px 0;
   }
 
@@ -559,7 +521,7 @@ li {
   }
 
   .comment-input {
-    border: 2px solid #a73715;  
+    border: 2px solid #133863;  
     width: 70%;
     padding: 0 30px 20px 30px;
     margin-left: auto;
@@ -576,8 +538,8 @@ li {
 
   #text-input,
   #name-input {
-    background-color: rgb(245, 244, 237);
-    border: 2px solid #a73715;
+    background-color: #E1ECF9;
+    border: 2px solid #133863;
     margin-bottom: 8px;
   }  
 
@@ -585,7 +547,7 @@ li {
   #comment-container li,
   #name-input {
     font-size: 17px;
-    color: #666464;
+    color: #133863;
     padding: 13px;
   }
 
@@ -593,7 +555,7 @@ li {
     width: 100px;
     padding: 11px;
     margin: 5px 0;
-    border: solid #a73715;
+    border: solid #133863;
   }
 
   .comment-text-design,
@@ -606,14 +568,16 @@ li {
   #order,
   #name {
     font-size: 16px;
-    border: 1px solid #b8b8b8;
+    color: #E1ECF9;
+    border: 1px solid #133863;
+    background-color: #133863;
     padding: 2px 5px;
   }
 
   #max:hover,
   #order:hover,
   #name:hover {
-    background-color: whitesmoke;
+    background-color: #236AB9;
   }
 
   #order {
@@ -621,12 +585,12 @@ li {
   }
 
   #comment-container li {
-    border-bottom: 2px solid #a73715;
+    border-bottom: 2px solid #133863;
     margin: 5px 30px 5px -5px;
   }
 
   #comment-container li:hover {
-    box-shadow: 2px 2px 10px 8px #b8b8b8;
+    box-shadow: 2px 2px 10px 8px #236AB9;
   }
 
   .heart {
@@ -637,21 +601,21 @@ li {
   #comment-container button {
     font-size: 15px;
     float: right;
-    border: 1px solid #858484;
+    border: 1px solid #133863;
     padding: 6px;
     margin-top: -6px;
   }
   
   #comment-container button,
   #submit {
-    background-color: #a73715;
+    background-color: #133863;
     color: whitesmoke;
   }
 
   #comment-container button:hover,
   #submit:hover {
-    background-color: #b8b8b8;
-    border-color: #b8b8b8;
+    background-color: #236AB9;
+    border-color: #236AB9;
   }
 
   @keyframes right { 
