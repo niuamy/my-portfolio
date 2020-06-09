@@ -13,7 +13,6 @@
 // limitations under the License.
 
 google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
 
 /**
  * Generates a random link on the page.
@@ -209,7 +208,7 @@ function createMap() {
 }
 
 /** Creates a chart and adds it to the page. */
-function drawChart() {
+function drawMentalHealthChart() {
   const data = new google.visualization.DataTable();
   data.addColumn('string', 'Year');
   data.addColumn('number', 'Percentage (Men)');
@@ -249,5 +248,5 @@ function getMessageDetails() {
   setMaxLength();
   setSubmitButtonUsability();
   createMap();
-//   drawChart();
+  drawMentalHealthChart();
 }
