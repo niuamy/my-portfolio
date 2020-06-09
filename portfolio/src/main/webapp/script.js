@@ -260,8 +260,31 @@ function drawMentalHealthChart() {
     'height':399
   };
 
-  const chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+  const chart = new google.visualization.ColumnChart(document.getElementById('mental-health-chart'));
   chart.draw(data, options);
+}
+
+/** Fetches emotional health data and uses it to create a chart. */
+function drawEmotionalHealthChart() {
+  fetch('/emotional-health-data').then(response => response.json())
+  .then((emotionalHealthVotes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Frequency');
+    data.addColumn('number', 'Votes');
+    Object.keys(emotionalHealthVotes).forEach((vote) => {
+      data.addRow([vote, emotionalHealthVotes[vote]]);
+    });
+
+    const options = {
+      'title': 'Tracking Frequency At Which Adults Set Aside Time To Check In With How They Are Feeling',
+      'width': '100%',
+      'height':400
+    };
+
+    const chart = new google.visualization.ColumnChart(
+      document.getElementById('emotional-health-chart'));
+    chart.draw(data, options);
+  });
 }
 
 function getBlogDetails() {
@@ -271,4 +294,5 @@ function getBlogDetails() {
   createMap();
   createRestaurantMap();
   drawMentalHealthChart();
+  drawEmotionalHealthChart();
 }
