@@ -217,6 +217,11 @@ function createRestaurantMap() {
     restaurants.forEach((restaurant) => {
       const marker = new google.maps.Marker(
         {position: {lat: restaurant.lat, lng: restaurant.lng}, map: map});
+      const description = '<h2>' + restaurant.name + '</h2><a href=\'' + restaurant.website + '\'><p>' + restaurant.website + '</p></a>';
+      const infoWindow = new google.maps.InfoWindow({content: description});
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
     });
   });
 }

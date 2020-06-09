@@ -39,11 +39,13 @@ public class RestaurantMapServlet extends HttpServlet {
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();
       String[] cells = line.split(",");
+      
+      String name = cells[0];
+      String website = cells[1];
+      double lat = Double.parseDouble(cells[2]);
+      double lng = Double.parseDouble(cells[3]);
 
-      double lat = Double.parseDouble(cells[0]);
-      double lng = Double.parseDouble(cells[1]);
-
-      restaurants.add(new RestaurantMap(lat, lng));
+      restaurants.add(new RestaurantMap(name, website, lat, lng));
     }
     scanner.close();
   }

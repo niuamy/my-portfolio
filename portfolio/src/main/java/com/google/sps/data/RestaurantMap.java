@@ -16,10 +16,14 @@ package com.google.sps.data;
 
 /** Represents a restaurant at a specific lat lng point. */
 public class RestaurantMap {
+  private String name;
+  private String website;
   private double lat;
   private double lng;
 
-  public RestaurantMap(double lat, double lng) {
+  public RestaurantMap(String name, String website, double lat, double lng) {
+    this.name = name;
+    this.website = website;
     this.lat = lat;
     this.lng = lng;
   }
