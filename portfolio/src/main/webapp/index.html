@@ -157,7 +157,29 @@
             <img src="images/blog.PNG" id="blog-img-right" alt="Blog" width="390" height="110">
           </a>
           <div class="blog-entry">
-            <div class="desktop-feature">  
+            <div class="desktop-feature">
+              <h2>Emotional Health Check-In</h2>
+              <h3>6/10/20</h4>
+              <div id="emotional-health-chart"></div>
+              <h2>Vote</h2>
+              <form action="/emotional-health-data" method="POST">
+                <select name="emotion-check-in">
+                  <option value="More Than Once a Day">More Than Once a Day</option>
+                  <option value="Once a Day">Once a Day</option>
+                  <option value="Multiple Times a Week">Multiple Times a Week</option>
+                  <option value="Once a Week">Once a Week</option>
+                  <option value="Once a Month">Once a Month</option>
+                  <option value="Less Than Once a Month">Less Than Once a Month</option>
+                </select>
+                <button>Submit</button>
+              </form>  
+              <h2>Men and Women's Mental Health Treatment Data</h2>
+              <h3>6/7/20</h2>
+              <div id="chart"></div>
+              <p id="mental-health-links">Refer to the provided links for more information:
+                <a href="https://www.statista.com/statistics/673172/mental-health-treatment-counseling-past-year-us-men/">Men's Data</a>
+                <a href="https://www.statista.com/statistics/666461/mental-health-treatment-counseling-past-year-us-women/" id="women-mental-health-data">Women's Data</a>
+              </p>    
               <h2>Support Black-Owned Restaurants in Central, OH</h2>
               <h3>6/9/20</h2>
               <p>Click on the marker to get the restaurant name and their website.</p>
@@ -165,13 +187,6 @@
               <h2>Google Maps!</h2>
               <h3>6/8/20</h2>
               <div id="map"></div>
-              <h2>Men and Women's Mental Health Treatment Data</h2>
-              <h3>6/7/20</h2>
-              <div id="chart"></div>
-              <p id="mental-health-links">Refer to the provided links for more information:
-                <a href="https://www.statista.com/statistics/673172/mental-health-treatment-counseling-past-year-us-men/"> Men's Data </a>
-                <a href="https://www.statista.com/statistics/666461/mental-health-treatment-counseling-past-year-us-women/" id="women-mental-health-data"> Women's Data </a>
-              </p>
             </div>
             <h2>New Comment Feature!</h2>
             <h3>6/1/20</h3>
@@ -207,13 +222,13 @@
                     <option value="2">2</option>
                     <option value="1">1</option>
                   </select>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <h2 id="comment-label">Comments:</h2>  
+                  <ul id="comment-container"></ul>
                 </div>
               </div>
-              <div class="comment-box">
-                <h2 id="comment-label">Comments:</h2>  
-                <ul id="comment-container"></ul>
-              </div>
-            </div>
             <h2>My Hidden Talent</h2>
             <h3>5/27/20</h3>
             <p>Ever since I was little, I've excelled at untying knots. There's nothing else really to it.</p>
