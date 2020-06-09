@@ -14,7 +14,7 @@
 
 package com.google.sps.servlets;
 
-import com.google.sps.data.Map;
+import com.google.sps.data.RestaurantMap;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,10 +26,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Returns restaurant location data as a JSON array, e.g. [{"lat": 38.4404675, "lng": -122.7144313}] */
-@WebServlet("/map-data")
-public class MapServlet extends HttpServlet {
+@WebServlet("/restaurant-map-data")
+public class RestaurantMapServlet extends HttpServlet {
 
-  private Collection<Map> restaurants;
+  private Collection<RestaurantMap> restaurants;
 
   @Override
   public void init() {
@@ -43,7 +43,7 @@ public class MapServlet extends HttpServlet {
       double lat = Double.parseDouble(cells[0]);
       double lng = Double.parseDouble(cells[1]);
 
-      restaurants.add(new Map(lat, lng));
+      restaurants.add(new RestaurantMap(lat, lng));
     }
     scanner.close();
   }

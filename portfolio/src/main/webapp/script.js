@@ -192,7 +192,7 @@ function createMap() {
  * Creates a map of restaurants and adds it to the page.
  */
 function createRestaurantMap() {
-  fetch('/map-data').then(response => response.json()).then((restaurants) => {
+  fetch('/restaurant-map-data').then(response => response.json()).then((restaurants) => {
     const map = new google.maps.Map(
       document.getElementById('restaurants-map'),
       {center: {lat: 39.975774, lng: -83.004708}, zoom: 11});

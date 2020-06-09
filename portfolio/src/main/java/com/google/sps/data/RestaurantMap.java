@@ -15,11 +15,11 @@
 package com.google.sps.data;
 
 /** Represents a restaurant at a specific lat lng point. */
-public class Map {
+public class RestaurantMap {
   private double lat;
   private double lng;
 
-  public Map(double lat, double lng) {
+  public RestaurantMap(double lat, double lng) {
     this.lat = lat;
     this.lng = lng;
   }
