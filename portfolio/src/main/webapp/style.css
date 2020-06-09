@@ -622,10 +622,19 @@ li {
   }
 
   #map,
+  #chart, {
   #restaurants-map {
     height: 400px;
     width: 100%;
     border: 2px solid #133863;
+  }
+
+  #mental-health-links a {
+    display: inline-block;
+  }
+
+  #women-mental-health-data {
+    margin-left: -9px;
   }
 
   @keyframes right { 

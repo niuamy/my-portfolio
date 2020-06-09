@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+google.charts.load('current', {'packages':['corechart']});
+
 /**
  * Generates a random link on the page.
  */
@@ -226,10 +228,47 @@ function createRestaurantMap() {
   });
 }
 
+/** Creates a chart and adds it to the page. */
+function drawMentalHealthChart() {
+  const data = new google.visualization.DataTable();
+  data.addColumn('string', 'Year');
+  data.addColumn('number', 'Percentage (Men)');
+  data.addColumn('number', 'Percentage (Women)');
+        data.addRows([
+          ['2002', 8.7, 16.9],
+          ['2003', 8.5, 17.5],
+          ['2004', 8.8, 16.6],
+          ['2005', 8.9, 16.8],
+          ['2006', 8.9, 16.6],
+          ['2007', 9.2, 17.1],
+          ['2008', 9.4, 17.3],
+          ['2009', 9.3, 17.2],
+          ['2010', 9.5, 17.8],
+          ['2011', 9.9, 17.1],
+          ['2012', 10.2, 18.6],
+          ['2013', 10.1, 18.8],
+          ['2014', 10.6, 18.8],
+          ['2015', 10.3, 17.8],
+          ['2016', 9.9, 18.5],
+          ['2017', 10.5, 18.8],
+          ['2018', 10.1, 19.5]
+        ]);
+
+  const options = {
+    'title': 'Percentage of U.S. men and women who received mental health treatment or counseling in the past year from 2002 to 2018',
+    'width': '100%',
+    'height':399
+  };
+
+  const chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+  chart.draw(data, options);
+}
+
 function getBlogDetails() {
   getMessage();
   setMaxLength();
   setSubmitButtonUsability();
   createMap();
   createRestaurantMap();
+  drawMentalHealthChart();
 }
