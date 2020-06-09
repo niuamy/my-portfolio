@@ -287,10 +287,12 @@ function drawEmotionalHealthChart() {
   });
 }
 
+
 /**
  * Change images to kittens.
  */
 function activateKittenMode() {
+  const img = document.getElementsByClassName("kitten-mode");
   const kittens = ['images/kittens/kitten0.jpg', 'images/kittens/kitten1.jpg',
     'images/kittens/kitten2.jpg','images/kittens/kitten3.jpg',
     'images/kittens/kitten4.jpg','images/kittens/kitten5.jpg',
@@ -300,10 +302,27 @@ function activateKittenMode() {
     'images/kittens/kitten12.jpg','images/kittens/kitten13.jpg',
     'images/kittens/kitten15.jpg','images/kittens/kitten14.jpg',
     'images/kittens/kitten16.jpg','images/kittens/kitten17.jpg'];
-  const img = document.getElementsByClassName("kitten-mode");
-  for(var i = 0; i < img.length; i++) {  
-    img[i].src = kittens[i];  
-  }
+  const normalImgs = ['images/leftTriangle.PNG', 'images/centerRectangle.PNG',
+    'images/rightTriangle.PNG', 'images/leftRectangle.PNG',
+    'images/circle.PNG', 'images/rightRectangle.PNG',
+    'images/aboutMe.PNG', 'images/myProjects.PNG',
+    'images/contactMe.PNG', 'images/linkedin.PNG',
+    'images/github.PNG', 'images/galleryAbout.PNG',
+    'images/puzzle.jpeg', 'images/mirror.jpeg',
+    'images/bench.jpeg', 'images/my.PNG',
+    'images/midTriangle.PNG', 'images/blog.PNG']; 
+
+  if (img[0].getAttribute('src') === 'images/kittens/kitten0.jpg') {
+    for(var i = 0; i < img.length; i++) {  
+      img[i].src = normalImgs[i];
+      document.getElementById('kitten-mode').innerText = 'KITTEN MODE';  
+    }
+  } else {
+    for(var i = 0; i < img.length; i++) {  
+      img[i].src = kittens[i]; 
+      document.getElementById('kitten-mode').innerText = 'NORMAL MODE';  
+    }  
+  } 
 }
 
 function getBlogDetails() {
