@@ -260,7 +260,7 @@ function drawMentalHealthChart() {
     'height':399
   };
 
-  const chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+  const chart = new google.visualization.ColumnChart(document.getElementById('mental-health-chart'));
   chart.draw(data, options);
 }
 
@@ -282,7 +282,7 @@ function drawEmotionalHealthChart() {
     };
 
     const chart = new google.visualization.ColumnChart(
-        document.getElementById('emotional-health-chart'));
+      document.getElementById('emotional-health-chart'));
     chart.draw(data, options);
   });
 }
