@@ -569,7 +569,9 @@ li {
 
   #max,
   #order,
-  #name {
+  #name,
+  select,
+  button {
     font-size: 16px;
     color: #E1ECF9;
     border: 1px solid #133863;
@@ -579,7 +581,9 @@ li {
 
   #max:hover,
   #order:hover,
-  #name:hover {
+  #name:hover,
+  select:hover,
+  button:hover {
     background-color: #236AB9;
   }
 
@@ -621,9 +625,10 @@ li {
     border-color: #236AB9;
   }
 
-  #map,
-  #chart,
-  #restaurants-map {
+  #googleplex-map,
+  #mental-health-chart,
+  #restaurants-map,
+  #emotional-health-chart {
     height: 400px;
     width: 100%;
     border: 2px solid #133863;
@@ -635,6 +640,10 @@ li {
 
   #women-mental-health-data {
     margin-left: -9px;
+  }
+
+  button {
+    padding: 3.5px;
   }
 
   @keyframes right { 
