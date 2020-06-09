@@ -287,6 +287,25 @@ function drawEmotionalHealthChart() {
   });
 }
 
+/**
+ * Change images to kittens.
+ */
+function activateKittenMode() {
+  const kittens = ['images/kittens/kitten0.jpg', 'images/kittens/kitten1.jpg',
+    'images/kittens/kitten2.jpg','images/kittens/kitten3.jpg',
+    'images/kittens/kitten4.jpg','images/kittens/kitten5.jpg',
+    'images/kittens/kitten6.jpg','images/kittens/kitten11.jpg',
+    'images/kittens/kitten7.jpg','images/kittens/kitten9.jpg',
+    'images/kittens/kitten10.jpg','images/kittens/kitten18.jpg',
+    'images/kittens/kitten12.jpg','images/kittens/kitten13.jpg',
+    'images/kittens/kitten15.jpg','images/kittens/kitten14.jpg',
+    'images/kittens/kitten16.jpg','images/kittens/kitten17.jpg'];
+  const img = document.getElementsByClassName("kitten-mode");
+  for(var i = 0; i < img.length; i++) {  
+    img[i].src = kittens[i];  
+  }
+}
+
 function getBlogDetails() {
   getMessage();
   setMaxLength();
