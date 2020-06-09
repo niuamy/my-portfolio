@@ -622,7 +622,8 @@ li {
   }
 
   #map,
-  #chart {
+  #chart, {
+  #restaurants-map {
     height: 400px;
     width: 100%;
     border: 2px solid #133863;
