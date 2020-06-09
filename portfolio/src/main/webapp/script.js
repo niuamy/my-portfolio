@@ -187,7 +187,7 @@ function toggleHeart(heart) {
 function createMap() {
   const googleplex = {lat: 37.422, lng: -122.084};
   const map = new google.maps.Map(
-    document.getElementById('map'),
+    document.getElementById('googleplex-map'),
     {center: googleplex, zoom: 16});
 
   const image = 'images/marker.png';
