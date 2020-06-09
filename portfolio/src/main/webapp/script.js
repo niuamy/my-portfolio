@@ -313,12 +313,12 @@ function activateKittenMode() {
     'images/midTriangle.PNG', 'images/blog.PNG']; 
 
   if (img[0].getAttribute('src') === 'images/kittens/kitten0.jpg') {
-    for(var i = 0; i < img.length; i++) {  
+    for (var i = 0; i < img.length; i++) {  
       img[i].src = normalImgs[i];
       document.getElementById('kitten-mode').innerText = 'KITTEN MODE';  
     }
   } else {
-    for(var i = 0; i < img.length; i++) {  
+    for (var i = 0; i < img.length; i++) {  
       img[i].src = kittens[i]; 
       document.getElementById('kitten-mode').innerText = 'NORMAL MODE';  
     }  
