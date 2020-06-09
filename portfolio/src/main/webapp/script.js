@@ -180,7 +180,7 @@ function toggleHeart(heart) {
 }
 
 /**
- * Creates a map and adds it to the page.
+ * Creates a map of the Googleplex and adds it to the page.
  */
 function createMap() {
   const googleplex = {lat: 37.422, lng: -122.084};
@@ -205,9 +205,26 @@ function createMap() {
   });
 }
 
-function getMessageDetails() {
+/**
+ * Creates a map of restaurants and adds it to the page.
+ */
+function createRestaurantMap() {
+  fetch('/restaurant-map-data').then(response => response.json()).then((restaurants) => {
+    const map = new google.maps.Map(
+      document.getElementById('restaurants-map'),
+      {center: {lat: 39.975774, lng: -83.004708}, zoom: 11});
+
+    restaurants.forEach((restaurant) => {
+      const marker = new google.maps.Marker(
+        {position: {lat: restaurant.lat, lng: restaurant.lng}, map: map});
+    });
+  });
+}
+
+function getBlogDetails() {
   getMessage();
   setMaxLength();
   setSubmitButtonUsability();
   createMap();
+  createRestaurantMap();
 }
