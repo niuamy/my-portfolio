@@ -15,7 +15,7 @@
 package com.google.sps.data;
 
 /** Represents a restaurant at a specific lat lng point. */
-public class Map {
+public class RestaurantMap {
   private String name;
   private String website;
   private double lat;

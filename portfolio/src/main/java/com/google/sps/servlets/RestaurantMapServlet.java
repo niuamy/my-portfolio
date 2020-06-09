@@ -44,8 +44,8 @@ public class RestaurantMapServlet extends HttpServlet {
       String website = cells[1];
       double lat = Double.parseDouble(cells[2]);
       double lng = Double.parseDouble(cells[3]);
-      
-      restaurants.add(new Map(name, website, lat, lng));
+
+      restaurants.add(new RestaurantMap(name, website, lat, lng));
     }
     scanner.close();
   }
