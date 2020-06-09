@@ -188,9 +188,27 @@ function createMap() {
     {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
 
-function getMessageDetails() {
+function createRestaurantMap() {
+  fetch('/map-data').then(response => response.json()).then((restaurants) => {
+    const map = new google.maps.Map(
+      document.getElementById('restaurants-map'),
+      {center: {lat: 39.975774, lng: -83.004708}, zoom: 11});
+
+    restaurants.forEach((restaurant) => {
+      const marker = new google.maps.Marker(
+        {position: {lat: restaurant.lat, lng: restaurant.lng}, map: map});
+      const infoWindow = new google.maps.InfoWindow({content: description});
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
+    });
+  });
+}
+
+function getBlogDetails() {
   getMessage();
   setMaxLength();
   setSubmitButtonUsability();
   createMap();
+  createRestaurantMap();
 }

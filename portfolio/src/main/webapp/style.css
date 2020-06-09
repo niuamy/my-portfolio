@@ -621,7 +621,8 @@ li {
     border-color: #236AB9;
   }
 
-  #map {
+  #map,
+  #restaurants-map {
     height: 400px;
     width: 100%;
     border: 2px solid #133863;
