@@ -183,16 +183,33 @@ function toggleHeart(heart) {
  * Creates a map of the Googleplex and adds it to the page.
  */
 function createMap() {
+  const googleplex = {lat: 37.422, lng: -122.084};
   const map = new google.maps.Map(
     document.getElementById('map'),
-    {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+    {center: googleplex, zoom: 16});
+
+  const image = 'images/marker.png';
+  const marker = new google.maps.Marker({position: googleplex, map: map, animation: google.maps.Animation.DROP});
+  const draggableMarker = new google.maps.Marker({position: {lat: 37.422, lng: -122.083}, map: map, title: "drag me", icon: image, draggable: true, animation: google.maps.Animation.DROP});
+	
+  const googleplexInfo = `<h2>Googleplex</h2><p>This is where I would've worked if not for Covid-19</p><img src="images/googleplex.jpg" alt="Googleplex" width="350">`;
+  const dragMarkerInfo = '<p>I am a draggable marker. Drag me.</p>';
+  const googleplexInfoWindow = new google.maps.InfoWindow({content: googleplexInfo}); 
+  const dragMarkerInfoWindow = new google.maps.InfoWindow({content: dragMarkerInfo});
+
+  marker.addListener('click', function() {
+    googleplexInfoWindow.open(map, marker);
+  });
+  draggableMarker.addListener('click', function() {
+    dragMarkerInfoWindow.open(map, draggableMarker);
+  });
 }
 
 /**
  * Creates a map of restaurants and adds it to the page.
  */
 function createRestaurantMap() {
-  fetch('/map-data').then(response => response.json()).then((restaurants) => {
+  fetch('/restaurant-map-data').then(response => response.json()).then((restaurants) => {
     const map = new google.maps.Map(
       document.getElementById('restaurants-map'),
       {center: {lat: 39.975774, lng: -83.004708}, zoom: 11});

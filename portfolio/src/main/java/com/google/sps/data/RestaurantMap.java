@@ -21,7 +21,7 @@ public class Map {
   private double lat;
   private double lng;
 
-  public Map(String name, String website, double lat, double lng) {
+  public RestaurantMap(String name, String website, double lat, double lng) {
     this.name = name;
     this.website = website;
     this.lat = lat;
