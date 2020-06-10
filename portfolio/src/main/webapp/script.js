@@ -292,38 +292,30 @@ function drawEmotionalHealthChart() {
  * Change images to kittens.
  */
 function activateKittenMode() {
-  const img = document.getElementsByClassName("kitten-mode");
-  const kittens = ['images/kittens/kitten0.jpg', 'images/kittens/kitten1.jpg',
-    'images/kittens/kitten2.jpg','images/kittens/kitten3.jpg',
-    'images/kittens/kitten4.jpg','images/kittens/kitten5.jpg',
-    'images/kittens/kitten6.jpg','images/kittens/kitten11.jpg',
-    'images/kittens/kitten7.jpg','images/kittens/kitten9.jpg',
-    'images/kittens/kitten10.jpg','images/kittens/kitten18.jpg',
-    'images/kittens/kitten12.jpg','images/kittens/kitten13.jpg',
-    'images/kittens/kitten15.jpg','images/kittens/kitten14.jpg',
-    'images/kittens/kitten16.jpg','images/kittens/kitten17.jpg'];
-  const normalImgs = ['images/leftTriangle.PNG', 'images/centerRectangle.PNG',
-    'images/rightTriangle.PNG', 'images/leftRectangle.PNG',
-    'images/circle.PNG', 'images/rightRectangle.PNG',
-    'images/aboutMe.PNG', 'images/myProjects.PNG',
-    'images/contactMe.PNG', 'images/linkedin.PNG',
-    'images/github.PNG', 'images/galleryAbout.PNG',
-    'images/puzzle.jpeg', 'images/mirror.jpeg',
-    'images/bench.jpeg', 'images/my.PNG',
-    'images/midTriangle.PNG', 'images/blog.PNG']; 
+  const kitten = document.getElementsByClassName("kitten-mode");
+  const normal = document.getElementsByClassName("normal-mode");
 
-  if (img[0].getAttribute('src') === 'images/kittens/kitten0.jpg') {
-    for (var i = 0; i < img.length; i++) {  
-      img[i].src = normalImgs[i];
-      document.getElementById('kitten-mode').innerText = 'KITTEN MODE';  
-    }
+  if (kitten[0].style.display === 'none') {
+    for (var i = 0; i < kitten.length; i++) {
+      kitten[i].style.display = 'block';
+      normal[i].style.display = 'none';
+    }  
   } else {
-    for (var i = 0; i < img.length; i++) {  
-      img[i].src = kittens[i]; 
-      document.getElementById('kitten-mode').innerText = 'NORMAL MODE';  
+    for (var i = 0; i < kitten.length; i++) {
+      kitten[i].style.display = 'none';
+      normal[i].style.display = 'block';
     }  
   } 
 }
+
+// function activateNormalDisplay() {
+//   const kitten = document.getElementsByClassName("kitten-mode"); 
+//   const normal = document.getElementsByClassName("normal-mode"); 
+//   for (var i = 0; i < kitten.length; i++) {
+//       kitten[i].style.display = 'none';
+//       normal[i].style.display = 'block';
+//   }  
+// }
 
 function getBlogDetails() {
   getMessage();
@@ -333,4 +325,5 @@ function getBlogDetails() {
   createRestaurantMap();
   drawMentalHealthChart();
   drawEmotionalHealthChart();
+  activateNormalDisplay();
 }
