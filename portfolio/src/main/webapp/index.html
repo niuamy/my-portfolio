@@ -15,7 +15,7 @@
         <h1 class="main-header">Amy's Portfolio</h1>
       </header>
       <nav class="nav-desktop">
-        <a href="#" onclick="activateKittenMode()">KITTEN MODE</a>
+        <a href="#" id="kitten-mode" onclick="activateKittenMode()">KITTEN MODE</a>
       </nav>
       <nav class="nav-mobile">
         <div class="nav-container">
@@ -35,24 +35,30 @@
         <div class="main-links">
           <div class="first-row">
             <a href="#about-me">
-              <img src="images/leftTriangle.PNG" class="kitten-mode" alt="About Me" width="230" height="270">
+              <img src="images/leftTriangle.PNG" class="normal-mode" alt="About Me" width="230" height="270">
+              <img src="images/kittens/kitten0.jpg" class="kitten-mode" style="display: none" alt="kitten" width="230" height="270">
             </a>
             <a href="#projects">
-              <img src="images/centerRectangle.PNG" class="kitten-mode" alt="Projects" width="240" height="320">
+              <img src="images/centerRectangle.PNG" class="normal-mode" alt="Projects" width="240" height="320">
+              <img src="images/kittens/kitten1.jpg" class="kitten-mode" alt="kitten" width="240" height="320">
             </a>
             <a href="#contact-me">
-              <img src="images/rightTriangle.PNG" class="kitten-mode" alt="Contact Me" width="230" height="270">
+              <img src="images/rightTriangle.PNG" class="normal-mode" alt="Contact Me" width="230" height="270">
+              <img src="images/kittens/kitten2.jpg" class="kitten-mode" alt="kitten" width="230" height="270">
             </a>
           </div>
           <div class= "second-row">
             <a href="#gallery">
-              <img src="images/leftRectangle.PNG" class="kitten-mode" id="gallery-main-link" alt="Gallery" width="230" height="290">
+              <img src="images/leftRectangle.PNG" class="normal-mode" id="gallery-main-link" alt="Gallery" width="230" height="290">
+              <img src="images/kittens/kitten3.jpg" class="kitten-mode" id="kitten-3" alt="kitten" width="230" height="290">
             </a>
             <a href="#gallery">
-              <img src="images/circle.PNG" class="kitten-mode" alt="About My Photography" width="240" height="240">
+              <img src="images/circle.PNG" class="normal-mode" alt="About My Photography" width="240" height="240">
+              <img src="images/kittens/kitten4.jpg" class="kitten-mode" alt="kitten" width="240" height="240">
             </a>
             <a href="#blog">
-              <img src="images/rightRectangle.PNG" class="kitten-mode" id="blog-main-link" alt="Blog" width="230" height="290">
+              <img src="images/rightRectangle.PNG" class="normal-mode" id="blog-main-link" alt="Blog" width="230" height="290">
+              <img src="images/kittens/kitten5.jpg" class="kitten-mode" id="kitten-5" alt="kitten" width="230" height="290">
             </a>
           </div>
           <a href="#about-me" class="arrow-transition"></a>
@@ -70,7 +76,8 @@
           </div>
           <div class="about-me-center">
             <a href="#">
-              <img src="images/aboutMe.PNG" class="kitten-mode" id="about-me-img" alt="About Me" width="250" height="310">
+              <img src="images/aboutMe.PNG" class="normal-mode" id="about-me-img" alt="About Me" width="250" height="310">
+              <img src="images/kittens/kitten6.jpg" class="kitten-mode" alt="kitten" width="250" height="310">
             </a>
           </div>
           <div class="about-me-right">
@@ -84,7 +91,8 @@
         </div>
         <div class="projects" id="projects">
           <a href="#">
-            <img src="images/myProjects.PNG" class="kitten-mode" id="my-projects-img" alt="My Projects" width="450" height="290">
+            <img src="images/myProjects.PNG" class="normal-mode" id="my-projects-img" alt="My Projects" width="450" height="290">
+            <img src="images/kittens/kitten11.jpg" class="kitten-mode" id="kitten-11" alt="kitten" width="450" height="290">
           </a>
           <h1 class="mobile-header" id="mobile-projects-header">Projects</h1> 
           <div class="project-description">
@@ -122,13 +130,16 @@
           </div>
           <div class="contact-me-desktop">
             <a href="#">
-              <img src="images/contactMe.PNG" class="kitten-mode" id="contact-me-img" alt="Contact Me" width="280" height="210">
+              <img src="images/contactMe.PNG" class="normal-mode" id="contact-me-img" alt="Contact Me" width="280" height="210">
+              <img src="images/kittens/kitten7.jpg" class="kitten-mode" id="kitten-7" alt="kitten" width="280" height="210">
             </a>
             <a href="https://www.linkedin.com/in/amy-niu/">
-              <img src="images/linkedin.PNG" class="kitten-mode" id="linkedin-img" alt="LinkedIn" width="210" height="210">
+              <img src="images/linkedin.PNG" class="normal-mode" id="linkedin-img" alt="LinkedIn" width="210" height="210">
+              <img src="images/kittens/kitten9.jpg" class="kitten-mode" id="kitten-9" alt="kitten" width="210" height="210">
             </a>
             <a href="https://github.com/niuamy">
-              <img src="images/github.PNG" class="kitten-mode" id="github-img" alt="GitHub" width="210" height="210">
+              <img src="images/github.PNG" class="normal-mode" id="github-img" alt="GitHub" width="210" height="210">
+              <img src="images/kittens/kitten10.jpg" class="kitten-mode" id="kitten-10" alt="kitten" width="210" height="210">
             </a>
           </div>
         </div>
@@ -136,23 +147,30 @@
           <h1 class="mobile-header" id="mobile-gallery-header">Gallery</h1> 
           <h2 id="mobile-about-photography">About My Photography</h1>
           <a href="#">
-            <img src="images/galleryAbout.PNG" class="kitten-mode" id="gallery-about-img" alt="Gallery and About My Photography" width="350" height="340">
+            <img src="images/galleryAbout.PNG" class="normal-mode" id="gallery-about-img" alt="Gallery and About My Photography" width="350" height="340">
+            <img src="images/kittens/kitten18.jpg" class="kitten-mode" id="kitten-18" alt="kitten" width="350" height="340">
             <p id="about-my-photography">To preface, normally my favorite subjects to capture on camera are other human beings, 
               specifically my friends and family. For privacy reasons however, I chose not to include actual photos of them.
             </p>
           </a>
           <div class="gallery-imgs">
-            <img src="images/puzzle.jpeg" class="kitten-mode" id="puzzle-img" alt="Puzzle" width="230" height="280">
-            <img src="images/mirror.jpeg" class="kitten-mode" id="mirror-img" alt="Mirror" width="230" height="280">
-            <img src="images/bench.jpeg" class="kitten-mode" id="bench-img" alt="Bench" width="230" height="280">
+            <img src="images/puzzle.jpeg" class="normal-mode" id="puzzle-img" alt="Puzzle" width="230" height="280">
+            <img src="images/kittens/kitten12.jpg" class="kitten-mode" id="kitten-12" alt="kitten" width="230" height="280">
+            <img src="images/mirror.jpeg" class="normal-mode" id="mirror-img" alt="Mirror" width="230" height="280">
+            <img src="images/kittens/kitten13.jpg" class="kitten-mode" id="kitten-13" alt="kitten" width="230" height="280">
+            <img src="images/bench.jpeg" class="normal-mode" id="bench-img" alt="Bench" width="230" height="280">
+            <img src="images/kittens/kitten15.jpg" class="kitten-mode" id="kitten-15" alt="kitten" width="230" height="280">
           </div>
         </div>
         <div class="blog" id="blog">
           <h1 class="mobile-header" id="mobile-blog-header">Blog</h1> 
           <a href="#">
-            <img src="images/my.PNG" class="kitten-mode" id="blog-img-left" alt="Blog" width="390" height="110">
-            <img src="images/midTriangle.PNG" class="kitten-mode" id="blog-img-center" alt="Blog" width="110" height="110">
-            <img src="images/blog.PNG" class="kitten-mode" id="blog-img-right" alt="Blog" width="390" height="110">
+            <img src="images/my.PNG" class="normal-mode" id="blog-img-left" alt="Blog" width="390" height="110">
+            <img src="images/kittens/kitten14.jpg" class="kitten-mode" id="kitten-14" alt="kitten" width="390" height="110">
+            <img src="images/midTriangle.PNG" class="normal-mode" id="blog-img-center" alt="Blog" width="110" height="110">
+            <img src="images/kittens/kitten16.jpg" class="kitten-mode" id="kitten-14" alt="kitten" width="110" height="110">
+            <img src="images/blog.PNG" class="normal-mode" id="blog-img-right" alt="Blog" width="390" height="110">
+            <img src="images/kittens/kitten17.jpg" class="kitten-mode" id="kitten-14" alt="kitten" width="390" height="110">
           </a>
           <div class="blog-entry">
             <div class="desktop-feature">
