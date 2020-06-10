@@ -208,18 +208,19 @@ function createMap() {
 }
 
 /**
- * Creates a map of restaurants and adds it to the page.
+ * Creates a map of businesses and adds it to the page.
  */
-function createRestaurantMap() {
-  fetch('/restaurant-map-data').then(response => response.json()).then((restaurants) => {
+function createBusinessMap() {
+  const marker = document.getElementById('business-selection').value;
+  fetch('/business-map-data?marker=' + marker).then(response => response.json()).then((businesses) => {
     const map = new google.maps.Map(
-      document.getElementById('restaurants-map'),
+      document.getElementById('business-map'),
       {center: {lat: 39.975774, lng: -83.004708}, zoom: 11});
 
-    restaurants.forEach((restaurant) => {
+    businesses.forEach((business) => {
       const marker = new google.maps.Marker(
-        {position: {lat: restaurant.lat, lng: restaurant.lng}, map: map});
-      const description = '<h2>' + restaurant.name + '</h2><a href=\'' + restaurant.website + '\'><p>' + restaurant.website + '</p></a>';
+        {position: {lat: business.lat, lng: business.lng}, map: map});
+      const description = '<h2>' + business.name + '</h2><a href=\'' + business.website + '\'><p>' + business.website + '</p></a>';
       const infoWindow = new google.maps.InfoWindow({content: description});
       marker.addListener('click', () => {
         infoWindow.open(map, marker);
@@ -311,7 +312,7 @@ function getBlogDetails() {
   setMaxLength();
   setSubmitButtonUsability();
   createMap();
-  createRestaurantMap();
+  createBusinessMap();
   drawMentalHealthChart();
   drawEmotionalHealthChart();
 }

@@ -614,11 +614,15 @@ li {
 
   #googleplex-map,
   #mental-health-chart,
-  #restaurants-map,
+  #business-map,
   #emotional-health-chart {
     height: 400px;
     width: 100%;
     border: 2px solid #133863;
+  }
+
+  #business-selection {
+    margin-bottom: 10px;
   }
 
   #mental-health-links a {

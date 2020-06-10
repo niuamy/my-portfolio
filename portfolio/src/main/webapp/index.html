@@ -179,10 +179,15 @@
                 <a href="https://www.statista.com/statistics/673172/mental-health-treatment-counseling-past-year-us-men/">Men's Data</a>
                 <a href="https://www.statista.com/statistics/666461/mental-health-treatment-counseling-past-year-us-women/" id="women-mental-health-data">Women's Data</a>
               </p>    
-              <h2>Support Black-Owned Restaurants in Central, OH</h2>
+              <h2>Support Black-Owned Businesses in Central, OH</h2>
               <h3>6/9/20</h2>
-              <p>Click on the marker to get the restaurant name and their website.</p>
-              <div id="restaurants-map"></div>
+              <p>Click on the marker to get the business name and their website.</p>
+              <select id="business-selection" onchange="createBusinessMap()">
+                <option value="restaurants">Restaurants</option>
+                <option value="retail">Retail</option>
+                <option value="art">Art, Entertainment, and Culture</option>
+              </select>
+              <div id="business-map"></div>
               <h2>Google Maps!</h2>
               <h3>6/8/20</h2>
               <div id="googleplex-map"></div>

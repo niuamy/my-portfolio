@@ -14,7 +14,7 @@
 
 package com.google.sps.servlets;
 
-import com.google.sps.data.RestaurantMap;
+import com.google.sps.data.BusinessMap;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,27 +25,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Returns restaurant location data as a JSON array, e.g. [{"lat": 38.4404675, "lng": -122.7144313}] */
-@WebServlet("/restaurant-map-data")
-public class RestaurantMapServlet extends HttpServlet {
+/** Returns business location data as a JSON array, e.g. [{"lat": 38.4404675, "lng": -122.7144313}] */
+@WebServlet("/business-map-data")
+public class BusinessMapServlet extends HttpServlet {
 
-  private Collection<RestaurantMap> restaurants;
+  private Collection<BusinessMap> businesses;
 
-  @Override
-  public void init() {
-    restaurants = new ArrayList<>();
-
-    Scanner scanner = new Scanner(getServletContext().getResourceAsStream("/WEB-INF/restaurants-data.csv"));
+  public void getBusiness(HttpServletRequest request) {
+    businesses = new ArrayList<>();
+    String businessName = request.getParameter("marker");
+    Scanner scanner = new Scanner(getServletContext().getResourceAsStream("/WEB-INF/" + businessName + "-data.csv"));
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();
       String[] cells = line.split(",");
-      
       String name = cells[0];
       String website = cells[1];
       double lat = Double.parseDouble(cells[2]);
       double lng = Double.parseDouble(cells[3]);
-
-      restaurants.add(new RestaurantMap(name, website, lat, lng));
+       
+      businesses.add(new BusinessMap(name, website, lat, lng));
     }
     scanner.close();
   }
@@ -54,7 +52,8 @@ public class RestaurantMapServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("application/json");
     Gson gson = new Gson();
-    String json = gson.toJson(restaurants);
+    getBusiness(request);
+    String json = gson.toJson(businesses);
     response.getWriter().println(json);
   }
 }
