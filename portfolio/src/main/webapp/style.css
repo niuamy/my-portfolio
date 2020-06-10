@@ -218,8 +218,8 @@ li {
   .about-me-center,
   #my-projects-img,
   .contact-me-desktop,
-  .gallery a img,
-  .blog img,
+  .gallery .normal-mode,
+  .blog .normal-mode,
   .desktop-feature {
     display:block;
   }
@@ -309,11 +309,10 @@ li {
     margin: 8px 0px;
   }
 
-  #gallery-main-link {
-    margin-top: -42px;
-  }
-
-  #blog-main-link {
+  #gallery-main-link,
+  #blog-main-link,
+  #kitten-5,
+  #kitten-3 {
     margin-top: -42px;
   }
 
@@ -363,7 +362,8 @@ li {
     margin-left: 470px;
   }
 
-  #my-projects-img {
+  #my-projects-img,
+  #kitten-11 {
     float: left;
     margin: 130px 20px 0 0;
     animation: right 2s linear .9s;
@@ -404,7 +404,8 @@ li {
     height: 525px;
   }
 
-  #gallery-about-img {
+  #gallery-about-img,
+  #kitten-18 {
     position: absolute;
     margin-top: 80px;
     animation: right 2s linear .9s;
@@ -424,18 +425,21 @@ li {
     position: absolute;
   }
 
-  #puzzle-img {
+  #puzzle-img,
+  #kitten-12 {
     margin: -265px 0 0 360px;
     animation: down 2s linear .9s;
   }
 
-  #mirror-img {
+  #mirror-img,
+  #kitten-13 {
     margin: -205px 0 0 565px;
     z-index: +1;
     animation: up 2s linear .9s;
   }
 
-  #bench-img {
+  #bench-img,
+  #kitten-15 {
     margin: -245px 0 0 765px;
     animation: down 2s linear .9s;
   }
@@ -635,6 +639,10 @@ li {
 
   button {
     padding: 3.5px;
+  }
+
+  .kitten-mode {
+    display: none;
   }
 
   @keyframes right { 
