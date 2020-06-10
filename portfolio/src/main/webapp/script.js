@@ -267,7 +267,7 @@ function drawMentalHealthChart() {
 
 /** Fetches emotional health data and uses it to create a chart. */
 function drawEmotionalHealthChart() {
-  fetch('/emotional-health-data').then(response => response.json())
+  fetch('/emotional-health').then(response => response.json())
   .then((emotionalHealthVotes) => {
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Frequency');
