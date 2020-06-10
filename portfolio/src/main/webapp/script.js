@@ -293,8 +293,7 @@ function drawEmotionalHealthChart() {
  */
 function activateKittenMode() {
   const kitten = document.getElementsByClassName("kitten-mode");
-  const normal = document.getElementsByClassName("normal-mode");
-
+  const normal = document.getElementsByClassName("normal-mode"); 
   if (kitten[0].style.display === 'none') {
     for (var i = 0; i < kitten.length; i++) {
       kitten[i].style.display = 'block';
@@ -308,15 +307,6 @@ function activateKittenMode() {
   } 
 }
 
-// function activateNormalDisplay() {
-//   const kitten = document.getElementsByClassName("kitten-mode"); 
-//   const normal = document.getElementsByClassName("normal-mode"); 
-//   for (var i = 0; i < kitten.length; i++) {
-//       kitten[i].style.display = 'none';
-//       normal[i].style.display = 'block';
-//   }  
-// }
-
 function getBlogDetails() {
   getMessage();
   setMaxLength();
@@ -325,5 +315,4 @@ function getBlogDetails() {
   createRestaurantMap();
   drawMentalHealthChart();
   drawEmotionalHealthChart();
-  activateNormalDisplay();
 }

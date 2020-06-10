@@ -218,8 +218,8 @@ li {
   .about-me-center,
   #my-projects-img,
   .contact-me-desktop,
-  .gallery a img,
-  .blog img,
+  .gallery .normal-mode,
+  .blog .normal-mode,
   .desktop-feature {
     display:block;
   }
@@ -309,11 +309,10 @@ li {
     margin: 8px 0px;
   }
 
-  #gallery-main-link {
-    margin-top: -42px;
-  }
-
-  #blog-main-link {
+  #gallery-main-link,
+  #blog-main-link,
+  #kitten-5,
+  #kitten-3 {
     margin-top: -42px;
   }
 
