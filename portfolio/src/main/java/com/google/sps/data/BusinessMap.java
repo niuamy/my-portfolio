@@ -14,7 +14,7 @@
 
 package com.google.sps.data;
 
-/** Represents a restaurant at a specific lat lng point. */
+/** Represents a business at a specific lat lng point. */
 public class BusinessMap {
   private String name;
   private String website;

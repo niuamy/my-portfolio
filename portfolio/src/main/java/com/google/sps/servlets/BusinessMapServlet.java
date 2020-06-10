@@ -33,8 +33,7 @@ public class BusinessMapServlet extends HttpServlet {
 
   public void getBusiness(HttpServletRequest request) {
     businesses = new ArrayList<>();
-    
-	String businessName = request.getParameter("marker");
+    String businessName = request.getParameter("marker");
     Scanner scanner = new Scanner(getServletContext().getResourceAsStream("/WEB-INF/" + businessName + "-data.csv"));
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();
