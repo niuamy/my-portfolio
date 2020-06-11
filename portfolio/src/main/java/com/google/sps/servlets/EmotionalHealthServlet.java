@@ -14,6 +14,12 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.HashMap;
@@ -24,26 +30,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/emotional-health-data")
+/** Servlet responsible for listing emotional health votes. **/
+@WebServlet("/emotional-health")
 public class EmotionalHealthServlet extends HttpServlet {
-
-  private Map<String, Integer> emotionalHealthVotes = new HashMap<>();
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    Map<String, Integer> emotionalHealthVotes = new HashMap<>();
+    Query query = new Query("Data").addSort("timestamp", SortDirection.DESCENDING);
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+    
+    for (Entity entity : results.asIterable()) {
+      String emotion = (String) entity.getProperty("response");
+      int currentVotes = emotionalHealthVotes.containsKey(emotion) ? emotionalHealthVotes.get(emotion) : 0;
+      emotionalHealthVotes.put(emotion, currentVotes + 1);
+    }
+
     response.setContentType("application/json");
     Gson gson = new Gson();
     String json = gson.toJson(emotionalHealthVotes);
     response.getWriter().println(json);
-  }
-
-  @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String emotion = request.getParameter("emotion-check-in");
-    int currentVotes = emotionalHealthVotes.containsKey(emotion) ? emotionalHealthVotes.get(emotion) : 0;
-    emotionalHealthVotes.put(emotion, currentVotes + 1);
-
-    response.sendRedirect("/index.html");
   }
 }

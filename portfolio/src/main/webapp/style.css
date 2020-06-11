@@ -625,6 +625,14 @@ li {
     border: 2px solid #133863;
   }
 
+  #emotional-health-chart {
+    margin-bottom: 25px;
+  }
+
+  #emotional-health-select {
+    margin-bottom: 8px;
+  }
+
   #business-selection {
     margin-bottom: 10px;
   }
