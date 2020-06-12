@@ -174,6 +174,19 @@
           </a>
           <div class="blog-entry">
             <div class="desktop-feature">
+              <h2>Translation</h2>
+              <h3>6/12/20</h3>
+    	        <p>Type a message and select a language, then click submit to translate it.</p>
+              <input type="text" id="translation-input"/>
+              <select id="language">
+                <option value="es">English</option>
+                <option value="zh">Chinese</option>
+                <option value="es">Spanish</option>
+                <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+              </select>
+              <input type="submit" id="translation-submit" onclick="requestTranslation()"/>
+    	        <p id="translation-result"></p>  
               <h2>Sentiment Analysis</h2>
               <h3>6/11/20</h3>
               <p>Enter a message and receive its sentiment score.</p>
@@ -181,7 +194,7 @@
               <input type="submit" id="submit-sentiment" onclick="getSentimentAnalysis()"/>
               <p id="sentiment-container"></p>  
               <h2>Emotional Health Check-In</h2>
-              <h3>6/10/20</h4>
+              <h3>6/10/20</h3>
               <p>Add data to the graph by submitting the frequency at which you set aside time to check in with your emotions.</p>
               <div id="emotional-health-chart"></div>
               <h3 id="emotional-health-select">Select</h3>
@@ -197,14 +210,14 @@
                 <button>Submit</button>
               </form>  
               <h2>Men and Women's Mental Health Treatment Data</h2>
-              <h3>6/7/20</h2>
+              <h3>6/7/20</h3>
               <div id="mental-health-chart"></div>
               <p id="mental-health-links">Refer to the provided links for more information:
                 <a href="https://www.statista.com/statistics/673172/mental-health-treatment-counseling-past-year-us-men/">Men's Data</a>
                 <a href="https://www.statista.com/statistics/666461/mental-health-treatment-counseling-past-year-us-women/" id="women-mental-health-data">Women's Data</a>
               </p>    
               <h2>Support Black-Owned Businesses in Central, OH</h2>
-              <h3>6/9/20</h2>
+              <h3>6/9/20</h3>
               <p>Click on the marker to get the business name and their website.</p>
               <select id="business-selection" onchange="createBusinessMap()">
                 <option value="restaurants">Restaurants</option>
@@ -213,7 +226,7 @@
               </select>
               <div id="business-map"></div>
               <h2>Google Maps!</h2>
-              <h3>6/8/20</h2>
+              <h3>6/8/20</h3>
               <div id="googleplex-map"></div>
             </div>
             <h2>New Comment Feature!</h2>
