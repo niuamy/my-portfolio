@@ -96,7 +96,8 @@ li {
   .gallery a img,
   .blog img,
   .desktop-feature,
-  #comment-label {
+  #comment-label,
+  .kitten-mode {
     display: none;
   }
 
