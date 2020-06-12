@@ -308,6 +308,15 @@ function activateKittenMode() {
   } 
 }
 
+function requestTranslation() {
+  const text = document.getElementById('translation-input').value;
+  const languageCode = document.getElementById('language').value;
+  fetch('/translation?text=' + text + '&languageCode=' + languageCode).then(response => response.json()).then((translatedMessage) => {
+  const resultContainer = document.getElementById('translation-result');
+  resultContainer.innerText = translatedMessage;
+  });
+}
+
 function getBlogDetails() {
   getMessage();
   setMaxLength();

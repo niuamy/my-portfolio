@@ -531,7 +531,8 @@ li {
   }
 
   #text-input,
-  #name-input {
+  #name-input,
+  #translation-input {
     background-color: #E1ECF9;
     border: 2px solid #133863;
     margin-bottom: 8px;
@@ -562,7 +563,8 @@ li {
   #order,
   #name,
   select,
-  button {
+  button,
+  #translation-submit {
     font-size: 16px;
     color: #E1ECF9;
     border: 1px solid #133863;
@@ -574,7 +576,8 @@ li {
   #order:hover,
   #name:hover,
   select:hover,
-  button:hover {
+  button:hover,
+  #translation-submit:hover {
     background-color: #236AB9;
   }
 
@@ -645,12 +648,18 @@ li {
     margin-left: -9px;
   }
 
-  button {
+  button,
+  #language {
     padding: 3.5px;
   }
 
   .kitten-mode {
     display: none;
+  }
+
+  #translation-input,
+  #translation-submit {
+    padding: 4px;
   }
 
   @keyframes right { 
