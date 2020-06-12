@@ -285,7 +285,7 @@ function drawEmotionalHealthChart() {
     const chart = new google.visualization.ColumnChart(
       document.getElementById('emotional-health-chart'));
     chart.draw(data, options);
-  })
+  });
 }
 
 
