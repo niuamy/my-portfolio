@@ -96,7 +96,8 @@ li {
   .gallery a img,
   .blog img,
   .desktop-feature,
-  #comment-label {
+  #comment-label,
+  .kitten-mode {
     display: none;
   }
 
@@ -532,7 +533,8 @@ li {
 
   #text-input,
   #name-input,
-  #translation-input {
+  #translation-input,
+  #text-input-analysis {
     background-color: #E1ECF9;
     border: 2px solid #133863;
     margin-bottom: 8px;
@@ -564,7 +566,8 @@ li {
   #name,
   select,
   button,
-  #translation-submit {
+  #translation-submit,
+  #submit-sentiment {
     font-size: 16px;
     color: #E1ECF9;
     border: 1px solid #133863;
@@ -577,7 +580,8 @@ li {
   #name:hover,
   select:hover,
   button:hover,
-  #translation-submit:hover {
+  #translation-submit:hover,
+  #submit-sentiment:hover {
     background-color: #236AB9;
   }
 
@@ -649,7 +653,8 @@ li {
   }
 
   button,
-  #language {
+  #language,
+  #submit-sentiment {
     padding: 3.5px;
   }
 
@@ -658,7 +663,8 @@ li {
   }
 
   #translation-input,
-  #translation-submit {
+  #translation-submit,
+  #text-input-analysis {
     padding: 4px;
   }
 

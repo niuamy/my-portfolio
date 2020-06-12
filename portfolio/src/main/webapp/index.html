@@ -176,7 +176,7 @@
             <div class="desktop-feature">
               <h2>Translation</h2>
               <h3>6/12/20</h3>
-    	      <p>Type a message and select a language, then click submit to translate it.</p>
+    	        <p>Type a message and select a language, then click submit to translate it.</p>
               <input type="text" id="translation-input"/>
               <select id="language">
                 <option value="es">English</option>
@@ -186,7 +186,13 @@
                 <option value="ar">Arabic</option>
               </select>
               <input type="submit" id="translation-submit" onclick="requestTranslation()"/>
-    	      <p id="translation-result"></p>  
+    	        <p id="translation-result"></p>  
+              <h2>Sentiment Analysis</h2>
+              <h3>6/11/20</h3>
+              <p>Enter a message and receive its sentiment score.</p>
+              <input type="text" id="text-input-analysis"/>
+              <input type="submit" id="submit-sentiment" onclick="getSentimentAnalysis()"/>
+              <p id="sentiment-container"></p>  
               <h2>Emotional Health Check-In</h2>
               <h3>6/10/20</h3>
               <p>Add data to the graph by submitting the frequency at which you set aside time to check in with your emotions.</p>

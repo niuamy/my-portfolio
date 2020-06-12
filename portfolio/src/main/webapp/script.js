@@ -317,6 +317,17 @@ function requestTranslation() {
   });
 }
 
+/**
+ * Displays a message's sentiment score.
+ */
+function getSentimentAnalysis() {
+  const message = document.getElementById('text-input-analysis').value;  
+  fetch('/sentiment?message=' + message).then(response => response.json()).then((sentiment) => { 
+    const container = document.getElementById('sentiment-container');
+    container.innerText = 'Your message\'s sentiment score is: ' + sentiment.score;
+  }
+)}
+
 function getBlogDetails() {
   getMessage();
   setMaxLength();
