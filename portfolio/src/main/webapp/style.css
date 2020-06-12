@@ -1,5 +1,5 @@
 body {
-  background-color: #E1ECF9;
+  background-color: white;
 }
 
 h1,
@@ -245,15 +245,26 @@ li {
   h1,
   h2,
   h3,
-  p,
   a {
-    color: #133863;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #28648f;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   p,
   a {
     font-size: 17px;
+  }
+
+  #kitten-mode {
+    font-size: 24px;
+    color: #317baf;
+    padding-top: 0;
+    font-weight: 500;
+  }
+
+  p {
+    color: #317baf;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   header {
@@ -265,6 +276,7 @@ li {
     font-size: 36px;
     text-align: center;
     animation: down 2s linear .9s;
+    font-weight: 400;
   }
 
   .nav-desktop {
@@ -279,8 +291,9 @@ li {
     margin: 5px;
   }
 
-  a:hover {
-    color:#236AB9;
+  a:hover
+  #kitten-mode:hover {
+    color: #A0C8E4;
   }
 
   a:hover img {
@@ -296,6 +309,18 @@ li {
   .main-links div {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+  .blue-panel,
+  .flip-panel:hover .normal-panel {
+    display: none;
+  }
+
+  .normal-panel,
+  .flip-panel:hover .blue-panel {
+    display: block;
   }
 
   .first-row {
@@ -310,15 +335,22 @@ li {
     margin: 8px 0px;
   }
 
-  #gallery-main-link,
-  #blog-main-link,
+  .blog-main-link,
   #kitten-5,
   #kitten-3 {
-    margin-top: -42px;
+    margin-top: -115px;
+  }
+
+  .about-me-main-link {
+    margin-top: -45px;
+  }
+
+  .gallery-main-link {
+    margin-top: 5px;
   }
 
   .arrow-transition {
-    border: solid #133863;
+    border: solid #317baf;
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 8px;
@@ -327,7 +359,7 @@ li {
   }
 
   .arrow-transition:hover {
-    border: solid #236AB9;
+    border: solid #539CCF;
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 8px;
