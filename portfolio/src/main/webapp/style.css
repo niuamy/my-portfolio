@@ -291,7 +291,7 @@ li {
     margin: 5px;
   }
 
-  a:hover
+  a:hover,
   #kitten-mode:hover {
     color: #A0C8E4;
   }
