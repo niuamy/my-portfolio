@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
+/** Servlet responsible for translation text **/
 @WebServlet("/translation")
 public class TranslationServlet extends HttpServlet {
 

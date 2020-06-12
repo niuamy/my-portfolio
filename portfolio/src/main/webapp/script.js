@@ -308,6 +308,9 @@ function activateKittenMode() {
   } 
 }
 
+/**
+ * Display translated text.
+ */
 function requestTranslation() {
   const text = document.getElementById('translation-input').value;
   const languageCode = document.getElementById('language').value;
