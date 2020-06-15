@@ -334,13 +334,11 @@ li {
     margin: 8px 0px;
   }
 
-  .blog-main-link,
-  #kitten-5,
-  #kitten-3 {
+  .blog-main-link{
     margin-top: -115px;
   }
 
-  .about-me-main-link {
+  .about-photography-main-link {
     margin-top: -45px;
   }
 
