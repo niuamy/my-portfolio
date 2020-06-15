@@ -12,7 +12,7 @@ input,
 select,
 li,
 button {
-  color: #133863;
+  color: #28648f;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -38,11 +38,11 @@ li {
     font-size: 9vw;
     margin: -25px 30px 0 30px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #236AB9;
+    border-bottom: 3px solid #4090C9;
   }
 
   #mobile-menu:active {
-    color: #236AB9;
+    color: #80B5DB;
   }
 
   #nav-links {
@@ -56,7 +56,7 @@ li {
   #nav-links a {
     display: block;
     margin: 1px;
-    border-bottom: 3px solid #236AB9;
+    border-bottom: 3px solid #4090C9;
   }
 
   .nav-container {
@@ -82,7 +82,7 @@ li {
   }
 
   img {
-    border: 5px solid #236AB9;
+    border: 5px solid #4090C9;
     padding: 15px;
     margin: 10px;
   }
@@ -119,11 +119,11 @@ li {
     padding-bottom: 10px;
     border-bottom: 3px solid;
     margin: 25px 30px;
-    border-color: #236AB9;
+    border-color: #4090C9;
   }
 
   .contact-me-mobile h2 {
-    border: 2px solid #236AB9;
+    border: 2px solid #4090C9;
     margin: 15px 110px;
     padding: 15px;
     border-radius: 5%;
@@ -148,13 +148,13 @@ li {
     height: 100%;
     margin: 10px 35px;
     padding: 5px;
-    border: 3px solid #133863;
+    border: 3px solid #28648F;
     border-radius: 5px;
   }
 
   #comment-container li {
     padding: 9px 10px;
-    border: 2px solid #133863;
+    border: 2px solid #28648F;
     border-radius: 5px;
     text-align: left;
     margin: 5px 10px 0 -30px;
@@ -171,9 +171,8 @@ li {
   #name-input {
     padding: 10px;
     width: 74%;
-    border: 2px solid #133863;
+    border: 2px solid #28648F;
     border-radius: 5px;
-    background-color: #E1ECF9;
     font-size: 4vw;
   }
 
@@ -182,9 +181,9 @@ li {
   #max,
   #submit,
   #comment-container button {
-    background-color: #133863;
+    background-color: #28648F;
     color: whitesmoke;
-    border: 1px solid #133863;
+    border: 1px solid #28648F;
     border-radius: 5px;
     padding: 4px;
     font-size: 4vw;
@@ -293,7 +292,7 @@ li {
 
   a:hover,
   #kitten-mode:hover {
-    color: #A0C8E4;
+    color: #539CCF;
   }
 
   a:hover img {
@@ -448,7 +447,7 @@ li {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     position: relative;
-    color: #E1ECF9;
+    color: #28648F;
     padding-top: 185px;
     margin: 0px 680px 0 115px;
     animation: right 2s linear .9s;
@@ -487,16 +486,8 @@ li {
     margin: 0 20px;
   }
 
-  #blog-img-left {
+  #blog-img {
     animation: right 2s linear .9s;  
-  }
-
-  #blog-img-center {
-    animation: fade-in 2s linear .9s;  
-  }
-
-  #blog-img-right {
-    animation: left 2s linear .9s;  
   }
 
   .blog-entry {
@@ -529,7 +520,7 @@ li {
   .comment-section {
     height: 100%;
     padding-top: 10px;
-    border: 2px solid #133863;
+    border: 2px solid #28648F;
   }
 
   .comment-section,
@@ -566,8 +557,7 @@ li {
   #text-input,
   #name-input,
   #text-input-analysis {
-    background-color: #E1ECF9;
-    border: 2px solid #133863;
+    border: 2px solid #28648F;
     margin-bottom: 8px;
   }  
 
@@ -575,7 +565,7 @@ li {
   #comment-container li,
   #name-input {
     font-size: 17px;
-    color: #133863;
+    color: #28648F;
     padding: 13px;
   }
 
@@ -583,7 +573,7 @@ li {
     width: 100px;
     padding: 11px;
     margin: 5px 0;
-    border: solid #133863;
+    border: solid #28648F;
   }
 
   .comment-text-design,
@@ -600,8 +590,8 @@ li {
   #submit-sentiment {
     font-size: 16px;
     color: #E1ECF9;
-    border: 1px solid #133863;
-    background-color: #133863;
+    border: 1px solid #28648F;
+    background-color: #28648F;
     padding: 2px 5px;
   }
 
@@ -611,7 +601,7 @@ li {
   select:hover,
   button:hover,
   #submit-sentiment:hover {
-    background-color: #236AB9;
+    background-color: #317BAF;
   }
 
   #order {
@@ -619,7 +609,7 @@ li {
   }
 
   #comment-container li {
-    border-bottom: 2px solid #133863;
+    border-bottom: 2px solid #28648F;
     margin: 5px 30px 5px -5px;
   }
 
@@ -635,21 +625,21 @@ li {
   #comment-container button {
     font-size: 15px;
     float: right;
-    border: 1px solid #133863;
+    border: 1px solid #28648F;
     padding: 6px;
     margin-top: -6px;
   }
   
   #comment-container button,
   #submit {
-    background-color: #133863;
+    background-color: #28648F;
     color: whitesmoke;
   }
 
   #comment-container button:hover,
   #submit:hover {
-    background-color: #236AB9;
-    border-color: #236AB9;
+    background-color: #317BAF;
+    border-color: #317BAF;
   }
 
   #googleplex-map,
@@ -658,7 +648,7 @@ li {
   #emotional-health-chart {
     height: 400px;
     width: 100%;
-    border: 2px solid #133863;
+    border: 2px solid #28648F;
   }
 
   #emotional-health-chart {
