@@ -295,16 +295,20 @@ function drawEmotionalHealthChart() {
 function activateKittenMode() {
   const kitten = document.getElementsByClassName("kitten-mode");
   const normal = document.getElementsByClassName("normal-mode"); 
+  const blue = document.getElementsByClassName("blue-panel");
   if (kitten[0].style.display === 'none') {
     for (var i = 0; i < kitten.length; i++) {
       kitten[i].style.display = 'block';
-      normal[i].style.display = 'none';
+      normal[i].style.display = 'none'; 
     }  
   } else {
     for (var i = 0; i < kitten.length; i++) {
       kitten[i].style.display = 'none';
       normal[i].style.display = 'block';
     }  
+  }
+  for(var i = 0; i < blue.length; i++) {
+    blue[i].style.display = 'none';
   } 
 }
 
