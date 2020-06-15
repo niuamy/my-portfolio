@@ -556,6 +556,7 @@ li {
 
   #text-input,
   #name-input,
+  #translation-input,
   #text-input-analysis {
     border: 2px solid #28648F;
     margin-bottom: 8px;
@@ -587,6 +588,7 @@ li {
   #name,
   select,
   button,
+  #translation-submit,
   #submit-sentiment {
     font-size: 16px;
     color: #E1ECF9;
@@ -600,6 +602,7 @@ li {
   #name:hover,
   select:hover,
   button:hover,
+  #translation-submit:hover,
   #submit-sentiment:hover {
     background-color: #317BAF;
   }
@@ -672,6 +675,7 @@ li {
   }
 
   button,
+  #language,
   #submit-sentiment {
     padding: 3.5px;
   }
@@ -680,6 +684,8 @@ li {
     display: none;
   }
 
+  #translation-input,
+  #translation-submit,
   #text-input-analysis {
     padding: 4px;
   }
