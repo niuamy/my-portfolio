@@ -688,10 +688,6 @@ li {
     padding: 4px;
   }
 
-  #kitten-17 {
-    margin-left: 0;
-  }
-
   @keyframes right { 
     from {opacity:0;}
     to   {opacity:1;}   
