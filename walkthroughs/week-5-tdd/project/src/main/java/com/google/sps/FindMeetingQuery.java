@@ -14,10 +14,124 @@
 
 package com.google.sps;
 
-import java.util.Collection;
+import java.util.*;
 
 public final class FindMeetingQuery {
+
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    throw new UnsupportedOperationException("TODO: Implement this method.");
+    //throw new UnsupportedOperationException("TODO: Implement this method.");
+    ArrayList<TimeRange> availableMeetingTimes = new ArrayList<>();
+
+    // No options if meeting duration is longer than a day.
+    if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) return availableMeetingTimes;
+
+    Collection<String> mandatoryAttendees = request.getAttendees();
+    ArrayList<TimeRange> unavailableTimes = getUnavailableTimes(events, mandatoryAttendees);
+    ArrayList<TimeRange> unavailableTimesNoOverlap = removeOverlappingTimes(unavailableTimes);
+    ArrayList<TimeRange> allAvailableTimes = getAllAvailableTimes(unavailableTimesNoOverlap);
+    availableMeetingTimes = getAvailableMeetingTimes(allAvailableTimes, (int)request.getDuration());
+
+    return availableMeetingTimes;
+  }
+
+  private ArrayList<TimeRange> getUnavailableTimes(Collection<Event> events, Collection<String> mandatoryAttendees) {
+    ArrayList<TimeRange> unavailableTimes = new ArrayList<>();  
+    for (Event e : events) {
+      boolean containsMandatoryAttendee = false;  
+      Set<String> currentEventAttendees = e.getAttendees();  
+      for (String attendee : mandatoryAttendees) {
+        if (!containsMandatoryAttendee && currentEventAttendees.contains(attendee)) {
+          unavailableTimes.add(e.getWhen());
+          containsMandatoryAttendee = true;
+        } 
+      }  
+    }
+    return unavailableTimes;
+  }
+
+  private ArrayList<TimeRange> removeOverlappingTimes(ArrayList<TimeRange> unavailableTimes) {
+    ArrayList<TimeRange> blockedTimes = new ArrayList<>();
+    unavailableTimes.sort(TimeRange.ORDER_BY_START);
+    if (unavailableTimes.size() == 1) return unavailableTimes;
+
+    while (unavailableTimes.size() > 0 ) {
+      TimeRange eventA = unavailableTimes.get(0);
+      TimeRange eventB = unavailableTimes.get(1);
+      if (eventA.overlaps(eventB)) {
+        // Case 3: eventA's range completely contains eventB.  
+        if (eventA.contains(eventB)) {  
+          unavailableTimes.remove(eventB);
+        // Case 3: eventB's range completely contains eventA.  
+        } else if (eventB.contains(eventA)) {
+          unavailableTimes.remove(eventA);
+        // Case 2: eventA partially overlaps with eventB.  
+        } else {
+          int startTime = eventA.start();
+          int endTime = eventB.end();
+          int i = 1;
+          // Loops through all consecutively overlapping events to find the earliest start time and latest end time.
+          while (i < unavailableTimes.size()-1) {
+            if (unavailableTimes.get(i).end() >= unavailableTimes.get(i+1).start()) {
+              endTime = unavailableTimes.get(i+1).end();  
+              unavailableTimes.remove(unavailableTimes.get(i));  
+            } else {
+              i++;
+            }
+          }  
+          blockedTimes.add(TimeRange.fromStartEnd(startTime,endTime,false));
+          unavailableTimes.remove(eventA);
+          unavailableTimes.remove(eventB);
+        }
+      } else {    
+        blockedTimes.add(eventA);
+        unavailableTimes.remove(eventA);
+      } 
+      if (unavailableTimes.size() == 1) {
+        blockedTimes.add(unavailableTimes.get(0));
+        unavailableTimes.remove(0);
+      }
+    }
+    return blockedTimes;
+  }
+
+  private ArrayList<TimeRange> getAllAvailableTimes(ArrayList<TimeRange> unavailableTimes) {
+    ArrayList<TimeRange> availableTimes = new ArrayList<>();
+    availableTimes.add(TimeRange.WHOLE_DAY);
+    for (TimeRange unavailable : unavailableTimes) {  
+      int i = 0;
+      while (i < availableTimes.size()) { 
+        if (availableTimes.get(i).overlaps(unavailable)) {
+          TimeRange available = availableTimes.remove(i);   
+          // Case 3: the available time range completely contains the unavailable time range.    
+          if (available.contains(unavailable)) {
+            availableTimes.add(TimeRange.fromStartEnd(available.start(),unavailable.start(),false));
+            availableTimes.add(TimeRange.fromStartEnd(unavailable.end(),available.end(),false));
+          // Case 3: the unavailable time range compeletely contains the available time range.  
+          } else if (unavailable.overlaps(available)) {
+            continue;
+          // Case 2: the available time range partially overlaps with the unavailable time range.
+          } else {
+            if (available.start() < unavailable.start()) {
+              availableTimes.add(TimeRange.fromStartEnd(available.start(),unavailable.start(),false));
+            } else {
+              availableTimes.add(TimeRange.fromStartEnd(unavailable.end(),available.end(),false));  
+            }
+          }
+        } else {
+          i++;
+        } 
+      }
+    }
+    return availableTimes;
+  }
+  
+  private ArrayList<TimeRange> getAvailableMeetingTimes(ArrayList<TimeRange> allAvailableTimes, int meetingDuration) {
+    ArrayList<TimeRange> availableMeetingTimes = new ArrayList<>();
+    while (allAvailableTimes.size() > 0) {
+      TimeRange available = allAvailableTimes.remove(0);
+      int availabilityDuration = available.duration();
+      if (meetingDuration <= availabilityDuration) availableMeetingTimes.add(available); 
+    }
+    return availableMeetingTimes;
   }
 }
