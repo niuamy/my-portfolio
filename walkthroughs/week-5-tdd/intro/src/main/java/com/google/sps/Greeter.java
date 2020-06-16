@@ -22,6 +22,12 @@ public class Greeter {
    * Returns a greeting for the given name.
    */
   public String greet(String name) {
-    return "Hello " + name;
+    StringBuilder noWhiteSpace = new StringBuilder();
+    for (int i = 0; i < name.length(); i++) {
+      if (name.charAt(i) != ' ') {
+        noWhiteSpace.append(name.charAt(i));    
+      }
+    }  
+    return "Hello " + noWhiteSpace;
   }
 }
