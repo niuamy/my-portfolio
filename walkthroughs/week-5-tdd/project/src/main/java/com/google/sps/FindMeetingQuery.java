@@ -25,24 +25,49 @@ public final class FindMeetingQuery {
     // No options if meeting duration is longer than a day.
     if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) return availableMeetingTimes;
 
+    // Whole day if no attendees.
+    if (request.getAttendees().size() == 0 && request.getOptionalAttendees().size() == 0) {
+      availableMeetingTimes.add(TimeRange.WHOLE_DAY);
+      return availableMeetingTimes;
+    }
+    
+    // Mandatory Attendees
     Collection<String> mandatoryAttendees = request.getAttendees();
     ArrayList<TimeRange> unavailableTimes = getUnavailableTimes(events, mandatoryAttendees);
     ArrayList<TimeRange> unavailableTimesNoOverlap = removeOverlappingTimes(unavailableTimes);
     ArrayList<TimeRange> allAvailableTimes = getAllAvailableTimes(unavailableTimesNoOverlap);
-    availableMeetingTimes = getAvailableMeetingTimes(allAvailableTimes, (int)request.getDuration());
+    ArrayList<TimeRange> mandatoryAvailableMeetingTimes = getAvailableMeetingTimes(allAvailableTimes, (int)request.getDuration());
+   
+    // Optional Attendees
+    Collection<String> optionalAttendees = request.getOptionalAttendees();
+    ArrayList<TimeRange> unavailableTimesOptional = getUnavailableTimes(events, optionalAttendees);
+    ArrayList<TimeRange> unavailableTimesNoOverlapOptional = removeOverlappingTimes(unavailableTimesOptional);
+    ArrayList<TimeRange> allAvailableTimesOptional = getAllAvailableTimes(unavailableTimesNoOverlapOptional);
+    ArrayList<TimeRange> optionalAvailableMeetingTimes = getAvailableMeetingTimes(allAvailableTimesOptional, (int)request.getDuration());
 
-    return availableMeetingTimes;
+    if (mandatoryAttendees.size() == 0 && optionalAttendees.size() > 0) return optionalAvailableMeetingTimes;
+    if (optionalAttendees.size() == 0 && mandatoryAttendees.size() > 0) return mandatoryAvailableMeetingTimes;
+
+    // Mandatory and Optional Attendees
+    ArrayList<TimeRange> optionalAndMandatory = getUnavailableTimes(events, mandatoryAttendees);
+    optionalAndMandatory.addAll(getUnavailableTimes(events, optionalAttendees));
+    ArrayList<TimeRange> allUnavailableTimesNoOverlap = removeOverlappingTimes(optionalAndMandatory);
+    ArrayList<TimeRange> allAvailableTimesAllAttendees = getAllAvailableTimes(allUnavailableTimesNoOverlap);
+    ArrayList<TimeRange> allAvailableMeetingTimes = getAvailableMeetingTimes(allAvailableTimesAllAttendees, (int)request.getDuration());
+    
+    if (allAvailableMeetingTimes.size() > 0) return allAvailableMeetingTimes;
+    return mandatoryAvailableMeetingTimes;
   }
 
-  private ArrayList<TimeRange> getUnavailableTimes(Collection<Event> events, Collection<String> mandatoryAttendees) {
+  private ArrayList<TimeRange> getUnavailableTimes(Collection<Event> events, Collection<String> attendees) {
     ArrayList<TimeRange> unavailableTimes = new ArrayList<>();  
     for (Event e : events) {
-      boolean containsMandatoryAttendee = false;  
+      boolean containsAttendee = false;  
       Set<String> currentEventAttendees = e.getAttendees();  
-      for (String attendee : mandatoryAttendees) {
-        if (!containsMandatoryAttendee && currentEventAttendees.contains(attendee)) {
+      for (String attendee : attendees) {
+        if (!containsAttendee && currentEventAttendees.contains(attendee)) {
           unavailableTimes.add(e.getWhen());
-          containsMandatoryAttendee = true;
+          containsAttendee = true;
         } 
       }  
     }
